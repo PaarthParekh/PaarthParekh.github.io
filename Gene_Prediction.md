@@ -2,7 +2,7 @@
 ### Purpose:
 Investigate an unknown outbreak pathogen using raw genome sequence data from the Centers for Disease Control and Prevention (CDC) foodborne illness surveillance outbreak investigations
 <img src="images/GenePrediction/Gene_Prediction_CDC.png?raw=true"/>
-<br><br>
+<br>
 <img src="images/GenePrediction/Gene_Prediction_Description.jpg?raw=true"/>
 ### Objective:
 From assembled genomes, predict genes or features using different prediction methods and evaluate selected tools on their accuracy and performance
@@ -45,11 +45,12 @@ PRODIGAL + GMS-2 PPV: 86.0% <br>
 
 Based on our preliminary testing on 3 reference genomes of Campylobacter jejuni, merging GeneMarkS-2 and PRODIGAL predictions ("union") was selected as the best Ab-initio method for our organism. <br>
 
-**Validate our results**
+**Validate our results** <br>
 To validate our results we used  <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download">BLAST</a> to seperate out the known and unknown hits in the list of genes obtained by Ab Initio tools. <br>
 
-**Database Selection**
-The sequences were obtained from the [https://www.ncbi.nlm.nih.gov/refseq/ RefSeq] bacteria database since it is a BLAST accessible database that provides a "comprehensive, integrated, non-redundant, well-annotated set of sequences, including genomic DNA, transcripts, and proteins." It presents a stable reference for genome prediction as well as genome annotation which would assist the Functional Annotation group. The database contains 'Campylobacter jejuni' as well as 'Campylobacter coli' data since these two are considered to be the most important enteropathogens among the ''Campylobacter'' spp. In addition, ''C. jejuni'' and ''C. coli'' have a strong relationship since they deviate from the same common ancestor. <br>
+**Database Selection** <br>
+The sequences were obtained from the [https://www.ncbi.nlm.nih.gov/refseq/ RefSeq] bacteria database since it is a BLAST accessible database that provides a "comprehensive, integrated, non-redundant, well-annotated set of sequences, including genomic DNA, transcripts, and proteins." It presents a stable reference for genome prediction as well as genome annotation which would assist the Functional Annotation group. <br>
+The database contains 'Campylobacter jejuni' as well as 'Campylobacter coli' data since these two are considered to be the most important enteropathogens among the ''Campylobacter'' spp. In addition, ''C. jejuni'' and ''C. coli'' have a strong relationship since they deviate from the same common ancestor. <br>
 <img src="images/GenePrediction/Relation_Database.png?raw=true"/> <br>
 
 ### Non Coding Tools
@@ -57,20 +58,20 @@ The sequences were obtained from the [https://www.ncbi.nlm.nih.gov/refseq/ RefSe
 * Transfer RNAs (tRNAs), ribosomal RNAs (rRNAs) and small RNAs(sRNAs) <br>
 * Protein synthesis/Translation (tRNA and rRNA) & gene regulation (sRNA) <br>
 * Related to antibiotic resistance <br>
-<img src="images/GenePrediction/NC_differenttypes.png?raw=true"/>
+<img src="images/GenePrediction/NC_differenttypes.png?raw=true"/> <br>
 
-<a href="http://130.235.244.92/ARAGORN/">ARAGON</a>
+<a href="http://130.235.244.92/ARAGORN/">ARAGON</a> <br>
 * Homology based tool <br>
 * Uses heuristic algorithms that score the tRNA and tmRNA genes based on their sequence and secondary structure similarities <br>
 * An effective '''tRNA''' search program, with sensitivity better than other current heuristic tRNA search algorithms <br>
 
-<a href="http://www.cbs.dtu.dk/services/RNAmmer/">RNAmmer</a>
+<a href="http://www.cbs.dtu.dk/services/RNAmmer/">RNAmmer</a> <br>
 * Ab Initio based tool <br>
 * Uses Hidden Markov Models trained on data from 5s rRNA database <br>
 * Fast with little loss of sensitivity, enabling the analysis of a complete genome in less than a minute <br>
 * Location of '''rRNAs''' can be predicted with a very high accuracy <br>
 
-<a href="http://eddylab.org/infernal/">Infernal</a> 
+<a href="http://eddylab.org/infernal/">Infernal</a> <br>
 * Implementation of covariance models (CMs) <br>
 * RNA homology search based on accelerated profile HMM methods and HMM-banded CM alignment methods <br>
 * 100-fold faster RNA homology searches and ∼10,000-fold acceleration over exhaustive non-filtered CM searches <br>
