@@ -29,11 +29,11 @@ I pursued my Undergraduate degree in Biomedical Engineering at Mumbai University
 ### Category Name 2
 
 <br>
-- [Project 1 Title](http://example.com/)
-- [Project 2 Title](http://example.com/)
-- [Project 3 Title](http://example.com/)
-- [Project 4 Title](http://example.com/)
-- [Project 5 Title](http://example.com/)
+- [Project 1 Title](http://example.com/) <br>
+- [Project 2 Title](http://example.com/) <br>
+- [Project 3 Title](http://example.com/) <br>
+- [Project 4 Title](http://example.com/) <br>
+- [Project 5 Title](http://example.com/) <br>
 
 ---
 
