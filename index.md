@@ -4,8 +4,10 @@
 
 ### Category Name 1 
 
-[Project 1 Title](/sample_page)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+[Gene Prediction Pipeline](https://github.com/PaarthParekh/GenePrediction)
+<img src="images/Gene_Prediction_CDC.jpg.png?raw=true"/><img src="images/Gene_Prediction_Description.png.jpg?raw=true"/>
+<br><br><br>
+<img src="images/Gene_Prediction_Pipeline.png?raw=true"/>
 
 ---
 [Project 2 Title](/pdf/sample_presentation.pdf)
