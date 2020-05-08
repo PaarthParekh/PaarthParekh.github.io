@@ -4,7 +4,7 @@
 
 ### Category Name 1 
 
-[Gene Prediction Pipeline](https://github.com/PaarthParekh/GenePrediction)
+[Gene Prediction Pipeline](/Gene_Prediction)
 <img src="images/Gene_Prediction_Pipeline.png?raw=true"/>
 
 ---
