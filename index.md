@@ -2,7 +2,7 @@
 
 ---
 
-I am currently a Graduate student here at Georgia Institute of Technology, pursing my Master's in Bioinformatics. Currently I am working as a Graduate Research Assistant at <a href="http://www.storicilab.gatech.edu/">Storici Lab</a>
+I am a Graduate student here at Georgia Institute of Technology, pursuing my Master's in Bioinformatics. Currently I am working as a Graduate Research Assistant at the <a href="http://www.storicilab.gatech.edu/">Storici Lab</a>
 <br>
 My Project revolves around the DNA of Saccharomyces cerevisiae. I am using different machine learning techniques to predict the firing time of the autonomously replicating sites (ARS) in it's DNA, based on the incorporation of Ribonucleotides. 
 <br><br>
