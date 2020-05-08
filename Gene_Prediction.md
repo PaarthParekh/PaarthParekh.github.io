@@ -1,3 +1,4 @@
+**Github Link**:<a href="https://github.com/PaarthParekh/GenePrediction">GenePrediction</a>
 # Introduction
 ### Purpose:
 Investigate an unknown outbreak pathogen using raw genome sequence data from the Centers for Disease Control and Prevention (CDC) foodborne illness surveillance outbreak investigations
@@ -76,4 +77,4 @@ The database contains 'Campylobacter jejuni' as well as 'Campylobacter coli' dat
 * RNA homology search based on accelerated profile HMM methods and HMM-banded CM alignment methods <br>
 * 100-fold faster RNA homology searches and ∼10,000-fold acceleration over exhaustive non-filtered CM searches <br>
 
-**Github Link**:<a href="https://github.com/PaarthParekh/GenePrediction">GenePrediction</a>
+
