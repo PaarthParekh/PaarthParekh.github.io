@@ -1,9 +1,10 @@
+# About 
+I am currently a Graduate student here at Georgia Institute of Technology, pursing my Master's in Bioinformatics. 
+
 ## Portfolio
 
 ---
-
-### Category Name 1 
-
+ 
 [Gene Prediction Pipeline](/Gene_Prediction)
 <img src="images/Gene_Prediction_Pipeline.png?raw=true"/>
 
@@ -31,5 +32,4 @@
 
 
 ---
-<p style="font-size:11px">Page template forked from <a href="https://github.com/evanca/quick-portfolio">evanca</a></p>
-<!-- Remove above link if you don't want to attibute -->
+
