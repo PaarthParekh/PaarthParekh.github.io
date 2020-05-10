@@ -17,8 +17,8 @@ I pursued my Undergraduate degree in Biomedical Engineering at Mumbai University
 <img src="images/Gene_Prediction_Pipeline.png?raw=true"/>
 <br>
 ---
-[Project 2 Title](/pdf/sample_presentation.pdf)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+[Project 2 Title](/DMR) <br>
+<img src="images/DMR/Descriptive_Stats_pict.png",style="width:500px;height:600px;"/>&nbsp<<img src="images/DMR/log_transform_mean_variance.png",style="width:500px;height:600px;"/>
 <br>
 ---
 [Project 3 Title](http://example.com/)
