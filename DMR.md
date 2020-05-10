@@ -3,9 +3,7 @@
 ### Purpose:
 Develop a machine learning model using the differentially obtained methylation sites between smokers and non smokers to predict the poor outcomes using the VACS index.  
 ## Description :
-|Sum of characteristics: Discovery Cohort|Sum of characteristics: Replication Cohort|
-|----------------------------------------|------------------------------------------|
-|Labels|Non-Smoking|Smoking |Grand Total ||Labels |Non-Smoking|Smoking |Grand Total |
+<img src="images/DMR/Description_data.png?raw=true"/> <br>
 
 ### Objectives:
 * Obtain differentially methylated sites from the discovery cohort of smokers and non smokers
