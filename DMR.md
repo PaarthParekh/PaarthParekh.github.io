@@ -5,7 +5,7 @@ Develop a machine learning model using the differentially obtained methylation s
 ## Description :
 |Sum of characteristics: Discovery Cohort|Sum of characteristics: Replication Cohort|
 |----------------------------------------|------------------------------------------|
-||Labels|Non-Smoking|Smoking|Grand Total|||Labels|Non-Smoking|Smoking |Grand Total ||
+|Labels|Non-Smoking|Smoking |Grand Total ||Labels |Non-Smoking|Smoking |Grand Total |
 
 ### Objectives:
 * Obtain differentially methylated sites from the discovery cohort of smokers and non smokers
