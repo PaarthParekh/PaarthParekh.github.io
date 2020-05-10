@@ -17,8 +17,8 @@ I pursued my Undergraduate degree in Biomedical Engineering at Mumbai University
 <img src="images/Gene_Prediction_Pipeline.png?raw=true"/>
 <br>
 ---
-[Project 2 Title](/DMR) <br>
-<img src="images/DMR/Descriptive_Stats_pict.png?" style="width:300px;height:310px;"> <img src="images/DMR/log_transform_mean_variance.png?" style="width:300px;height:310px;">
+[Predicting the poor outcomes of HIV Smokers patients using VACS index](/DMR) <br>
+<img src="images/DMR/Descriptive_Stats_pict.png?" style="width:290px;height:300px;"> <img src="images/DMR/log_transform_mean_variance.png?" style="width:290px;height:300px;">
 <br>
 ---
 [Project 3 Title](http://example.com/)
