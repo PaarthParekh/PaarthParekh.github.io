@@ -1,12 +1,14 @@
-**Github Link**:<a href="https://github.com/PaarthParekh/GenePrediction">GenePrediction</a>
+**Github Link**:<a href="https://github.com/PaarthParekh/HIV_Smokers">HIV_Smokers</a>
 # Introduction
 ### Purpose:
-Investigate an unknown outbreak pathogen using raw genome sequence data from the Centers for Disease Control and Prevention (CDC) foodborne illness surveillance outbreak investigations
-<img src="images/GenePrediction/Gene_Prediction_CDC.png?raw=true"/>
-<br>
-<img src="images/GenePrediction/Gene_Prediction_Description.jpg?raw=true"/>
-### Objective:
-From assembled genomes, predict genes or features using different prediction methods and evaluate selected tools on their accuracy and performance
+Develop a machine learning model using the differentially obtained methylation sites between smokers and non smokers to predict the poor outcomes using the VACS index.  
+## Description :
+|Sum of characteristics: Discovery Cohort|Sum of characteristics: Replication Cohort|
+|----------------------------------------|------------------------------------------|
+||Labels|Non-Smoking|Smoking|Grand Total|||Labels|Non-Smoking|Smoking |Grand Total ||
+
+### Objectives:
+* Obtain differentially methylated sites from the discovery cohort of smokers and non smokers
 
 **What is Gene Prediction?** <br>
 Identification of the regions of genomic DNA that encode genes, which are fragments of DNA that encodes a functional molecule: <br>
