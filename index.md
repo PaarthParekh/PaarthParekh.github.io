@@ -18,7 +18,7 @@ I pursued my Undergraduate degree in Biomedical Engineering at Mumbai University
 <br>
 ---
 [Predicting the poor outcomes of HIV Smokers patients using VACS index](/DMR) <br>
-<img src="images/DMR/DMR_desc(2).png?raw=true"/>
+<img src="images/DMR/DMR_desc(2).png?" style="width:500px;height:600px;"/>
 <br>
 ---
 [Project 3 Title](http://example.com/)
