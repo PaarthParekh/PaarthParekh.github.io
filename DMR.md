@@ -1,5 +1,6 @@
 **Github Link**:<a href="https://github.com/PaarthParekh/HIV_Smokers">HIV_Smokers</a>
 # Introduction
+--
 ### Purpose:
 Develop a machine learning model using the differentially obtained methylation sites between smokers and non smokers to predict the poor outcomes using the VACS index.  
 ### Description :
@@ -10,22 +11,25 @@ Develop a machine learning model using the differentially obtained methylation s
 * Obtain the list of differentially methylated CPG sites between smokers and non-smokers ( and look for other useful characteristics) for both the discovery cohort and the replication cohort. <br>
 * Using data processing techniques to clean the data and obtain the file files which can be used to fit the model. <br>
 * Use these sites and other charactersitics obtained to predict the poor outcomes using VACS index. <br>
+<br><br><br>
 ## Data Processing
 **Data Distribution and Pre processing** <br>
 Insted of looking at box plots for individual samples, we look at the descriptive statisctical parameters distribution. The preprocessed data from GEOdataset has been quantile normalized.
 <img src="images/DMR/Descriptive_Stats_pict.png?raw=true"/> <br>
 <img src="images/DMR/mean_variance.png?raw=true"/> <br>
 <img src="images/DMR/log_transform_mean_variance.png?raw=true"/> <br>
-**DMRcate**
+<br>
+**DMRcate** <br>
 For obtaining the differentially methylated regions we looked at different methods. Methods developed DMRs in recent years were: <br>
 <img src="images/DMR/DMR_stats.png?raw=true"/> <br>
-Went ahead with DMRcate for two reasons, <br>
+Went ahead with DMRcate for two reasons,
 * First it was a recently developed tool in 2015. <br>
 * Second it had good number of citations. <br>
+<br>
 Coming to DMRcate, here is a picture describing the working of DMRcate in a cancer vs normal methylated sites. <br>
 <img src="images/DMR/DMRcate.png?raw=true"/>
-<br>
-*DMRCate Parameters:* <br>
+<br><br>
+***DMRCate Parameters:*** <br>
 DMRcate can work with Beta values or M values generated from Illumina Arrays <br>
 * Beta values: M/(U+M+𝛼) (values obtained from NCBI Geodatasets) <br>
 * M values: log equivalent of Beta values <br> (we didn't opt for M values cause in the mean variance plot obtained above we can see a shift in the biasness)
@@ -34,14 +38,15 @@ DMRcate can work with Beta values or M values generated from Illumina Arrays <br
 * FDR = 0.05 <br>
 * lambda to define the length of the sliding frame (we used 500 bp) <br>
 * C=2, suggesting 250bp(lamba/C) as the length to look at both sides of each cpg to find correlating probes <br>
-****Results obtained for DMRcate**** <br>
+<br> <br>
+***Results obtained for DMRcate*** <br>
 Discovery Cohort: <br>
 * 872 Cpg sites <br>
 * 197 DMRs <br>
 Replication Cohort: <br>
 * 1651 Cpg sites <br>
 * 385 DMRs <br>
-
+<br><br><br>
 There are 237 Cpg sites common in both Discovery and Replication Cohort, out of which top 51 are most significant in both cohorts.
 Concentrated on these 51 and 237 Cpg probes for further analysis. <br>
 
@@ -52,14 +57,15 @@ Concentrated on these 51 and 237 Cpg probes for further analysis. <br>
 We looked at Unsupervised probes selection based on Mean Variances plot and we also did PCA analysis, where we saw a distinction between the race, Black , White and others.<br>
 <img src="images/DMR/Unsupervised_probes.png?raw=true"/> <br>
 <img src="images/DMR/Race_seperation.png?raw=true"/> <br>
-
-## Model Fitting 
+<br><br><br>
+## Model Fitting <br>
 **Outcome Prediction** <br>
 We found 231 common CPG sites between discovery and replication cohort which were differentially methylated between Smokers and Non-Smokers. <br>
 Using these CPG sites, we decided to train a model to predict the VACS index. <br>
 We received the VACS index for the discovery cohort from the authors. <br>
 The paper had used a classification method to indicate that VACS index above 50 were significant for poor outcomes (“1”) and below 50 VACS index were not (“0”). <br>
-We looked at the Correlation matrix of different features to fit a model to predict the VACS index using regression techniques. We didnt find any linear relations and the results were poor. <br>
+We looked at the Correlation matrix of different features to fit a model to predict the VACS index using regression techniques. We didnt find any linear relations and the *results were poor* with none of the features having a relation of above 0.2. <br>
+<br>
 We decided to make it into a classification problem, due to the shortage of time, classifying the VACS index as the authors of the paper had followed. <br>
 **Data Distribution**<br> 
 Before going into the classification, the data distribution of VACS index above 50 and the vacs index below 50 was unbalanced. The paper tackled this problem using an Ensemble model. <br>
@@ -88,7 +94,7 @@ Results obained <br>
 • Accuracy: 0.6376811594202898 <br>
 • Precision: 0.42857142857142855 <br>
 • Recall: 0.2608695652173913 <br>
-
+<br><br><br>
 ## Future Analysis
 After a run of trying out different prediction models and understanding the methylation data better, there are several improvements that can lead to better accuracy or performance of the models. Following are a few improvements or areas that can be improved. <br>
 • As there is differential clustering in PCA analysis between races, it would be best to divide the data and try out prediction to avoid poor performance or accuracy. <br>
