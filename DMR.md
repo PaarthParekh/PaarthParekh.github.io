@@ -69,7 +69,7 @@ I wanted to take a different approach and looked at SMOTE, a oversampling method
 The synthetic instance is then created by choosing one of the k nearest neighbors b at random and connecting a and b to form a line segment in the feature space. The synthetic instances are generated as a convex combination of the two chosen instances a and b. <br>
 **SVM** <br>
 I looked at different kernels for SVM, which could be useful for our analysis. GOing through the literature I came across the brilliant example of the iris dataset with two features which described the different kernels prfectly. <br>
-<img src="images/DMR/SVM_petal.png?raw=true"/> <br>
+<img src="images/DMR/SVM_Petal.png?raw=true"/> <br>
 We tried out different kernels, splitting the data in a stratified manner expecting the polynomial kernel to give the best results, but the linear kernel with the C value as 1 gave the best results.  <br>
 **Results**:
 We did 10-fold cross validation with the linear kernel and obtained the following results. <br>
@@ -82,7 +82,7 @@ These results were already better than the ones obtained in the paper, but since
 **KNN clustering** <br>
 Obtained a graph of KNN accuracy with different number of neighbours from 1 to 40. <br>
 Graph obtained was: <br>
-<img src="images/DMR/KVM_diff_neigh.png?raw=true"/> <br>
+<img src="images/DMR/KVM_diff_neig.png?raw=true"/> <br>
 I got stable results from 25 clusters and decided to use the SMOTE data to get the best results. <br>
 Results obained <br>
 • Accuracy: 0.6376811594202898 <br>
