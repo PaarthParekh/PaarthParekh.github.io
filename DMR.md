@@ -1,6 +1,5 @@
 **Github Link**:<a href="https://github.com/PaarthParekh/HIV_Smokers">HIV_Smokers</a>
 # Introduction
---
 ### Purpose:
 Develop a machine learning model using the differentially obtained methylation sites between smokers and non smokers to predict the poor outcomes using the VACS index.  
 ### Description :
