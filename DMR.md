@@ -1,11 +1,11 @@
 **Github Link**:<a href="https://github.com/PaarthParekh/HIV_Smokers">HIV_Smokers</a>
 # Introduction
-### Purpose:
+## Purpose:
 Develop a machine learning model using the differentially obtained methylation sites between smokers and non smokers to predict the poor outcomes using the VACS index.  
-### Description :
+## Description :
 <img src="images/DMR/Description_data.png?raw=true"/>
 
-### Objectives:
+## Objectives:
 * Obtain the common list of CPG sites between the Illumina 450K and EPIC 870K platforms. (408,583 CpGs shared between both the platforms). <br>
 * Obtain the list of differentially methylated CPG sites between smokers and non-smokers ( and look for other useful characteristics) for both the discovery cohort and the replication cohort. <br>
 * Using data processing techniques to clean the data and obtain the file files which can be used to fit the model. <br>
