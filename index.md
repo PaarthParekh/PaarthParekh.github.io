@@ -33,7 +33,7 @@ I pursued my Undergraduate degree in Biomedical Engineering at Mumbai University
 - [Project 2 Title](http://example.com/) <br>
 - [Project 3 Title](http://example.com/) <br>
 - [Project 4 Title](http://example.com/) <br>
-- [Holter Monitor using Arduino Uno]() <br>
+- [Holter Monitor using Arduino Uno](https://github.com/PaarthParekh/Holter-Monitor) <br>
 
 ---
 
