@@ -11,6 +11,7 @@ I pursued my Undergraduate degree in Biomedical Engineering at Mumbai University
 
 ## Portfolio
 
+### Bioinformatics Projects 
 ---
 
 [Gene Prediction Pipeline](/Gene_Prediction)<br>
@@ -25,14 +26,14 @@ I pursued my Undergraduate degree in Biomedical Engineering at Mumbai University
 <br>
 ---
 
-### Category Name 2
+### Other Projects
 
 <br>
-- [Project 1 Title](http://example.com/) <br>
+- [Weather App using Django](https://github.com/PaarthParekh/Weather_app_django) <br>
 - [Project 2 Title](http://example.com/) <br>
 - [Project 3 Title](http://example.com/) <br>
 - [Project 4 Title](http://example.com/) <br>
-- [Project 5 Title](http://example.com/) <br>
+- [Holter Monitor using Arduino Uno]() <br>
 
 ---
 
