@@ -22,11 +22,12 @@ I pursued my Undergraduate degree in Biomedical Engineering at Mumbai University
 --- <br>
 [Predicting poor outcomes of HIV Smokers patients using VACS index](/DMR) <br>
 <img src="images/DMR/Affected_Pathways.png?" width="800" height="300"> 
+<br>
 --- <br>
-[Ann Arbor,MI during Recession](/Data_Science)
+[Ann Arbor,MI during Recession](/Data_Science) <br>
 <img src="images/MI/Final_assignment.jpg?raw=true"/>
 <br>
----
+--- <br>
 
 ### Other Projects
 
