@@ -5,20 +5,20 @@
 ## Purpose:
 To look for the effects of recession to the per capita income of an individual and unemployment numbers in the area of Ann Arbor,MI.
 <br><br>
-## Reason
+### Reason
 <br>
 My Data Science project was based the broad topic of economic activity or measures for the region of Ann Arbor, Michigan, United States, or the United States.<br>
 Economics is a very wide field. While looking for a topic I came across parameters like GDP, recession, the median income, employment, unemployment, cost of living etc. 
 I chose this topic to answer my question, how does the recession affect employment and income for an individual, as currently,in 2020, recession has affected many of us.
 <br>
-## Data Sets used:
+### Data Sets used:
 1. <a href="https://fredhelp.stlouisfed.org/fred/data/understanding-the-data/recession-bars/">Recession Dates USA</a>
 2. <a href="https://www.usinflationcalculator.com/inflation/historical-inflation-rates/">Inflation Rate USA</a>
 3. <a href="https://fred.stlouisfed.org/series/LNS13100000">Unemployment Ann Arbor,MI</a>
 4. <a href="https://fred.stlouisfed.org/series/CE16OV">Employment Ann Arbor,MI</a>
 5. <a href="https://fred.stlouisfed.org/series/ANNA426PCPI">Personal Income Ann Arbor,MI</a>
 <br><br>
-## Objectives:
+### Objectives:
 * Look for the change in Employment and Unemployment numbers during Recession <br>
 * Look for the changes in the Personal Income during Recession<br>
 * Adjust the average inflation rate in the United States to look for the change in Income during Recession<br>
