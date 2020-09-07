@@ -24,7 +24,7 @@ I pursued my Undergraduate degree in Biomedical Engineering at Mumbai University
 <img src="images/DMR/Affected_Pathways.png?" width="800" height="300"> 
 --- <br>
 [Ann Arbor,MI during Recession](/Data_Science)
-<img src="images/Final_assignment.jpg?raw=true"/>
+<img src="images/MI/Final_assignment.jpg?raw=true"/>
 <br>
 ---
 
