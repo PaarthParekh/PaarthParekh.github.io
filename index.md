@@ -17,15 +17,15 @@ I pursued my Undergraduate degree in Biomedical Engineering at Mumbai University
 ---
 
 [Gene Prediction Pipeline](/Gene_Prediction)<br>
-<img src="images/Gene_Prediction_Pipeline.png?raw=true"/>
+<img src="images/Gene_Prediction_Pipeline.png?raw=true"/>(/Gene_Prediction)
 <br>
 --- <br>
 [Predicting poor outcomes of HIV Smokers patients using VACS index](/DMR) <br>
-<img src="images/DMR/Affected_Pathways.png?" width="800" height="300"> 
+<img src="images/DMR/Affected_Pathways.png?" width="800" height="300"> (/DMR)
 <br>
 --- <br>
 [Ann Arbor,MI during Recession](/Data_Science) <br>
-<img src="images/MI/Final_assignment.jpg?raw=true"/>
+<img src="images/MI/Final_assignment.jpg?raw=true"/>(/Data_Science) 
 <br>
 --- <br>
 
