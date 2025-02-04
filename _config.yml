@@ -9,4 +9,4 @@ description: > # your text below (remove <br> elements if you don't need line br
   <br><br>
   <a href="https://www.linkedin.com/in/paarth-parekh-357123147/">View My LinkedIn Profile</a> 
   
-theme: jekyll-theme-minimal
+theme: minima
