@@ -1,3 +1,8 @@
+---
+layout: home
+title: Home
+---
+{{
 # About 
 
 ---
@@ -27,3 +32,4 @@ I am Bioinfomatics Scientist at Javelin Biotech.
 
 <br>
 - [Weather App using Django](https://github.com/PaarthParekh/Weather_app_django) <br>
+}}
