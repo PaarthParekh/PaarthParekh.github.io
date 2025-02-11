@@ -102,6 +102,26 @@
       color: #66BB6A;
       /* Customize the bullet color if desired */
     }
+
+    ul.custom-bullet2 li {
+      list-style: none;
+      /* Remove default bullet */
+      position: relative;
+      padding-left: 1.2em;
+      font-size: 0.9375rem;
+      /* Space for the custom bullet */
+      margin-bottom: 0.5em;
+      margin-right: 0.75rem;
+      /* Optional: spacing between items */
+    }
+
+    ul.custom-bullet2 li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: #66BB6A;
+      /* Customize the bullet color if desired */
+    }
   </style>
 </head>
 
@@ -299,67 +319,88 @@
           <div id="job1" class="job-detail fade-in">
             <h3 class="text-xl font-semibold">Bioinformatics Scientist II <a href="https://javelinbiotech.com/"
                 target="_blank" class="text-green-400">@Javelin Biotech</a></h3>
+            <div class="text-md text-gray-400">
+              <span> Bioinformatics and Computational Modeling</span>
+            </div>
             <div class="text-sm text-gray-400 mb-2">
               <span>June 2021 - Present</span> | <span>Woburn, MA</span>
             </div>
-            <ul class="custom-bullet">
-              <li>Created a novel transcriptomic metric to accurately compare in-vitro models to Clinical samples, to
+            <ul class="custom-bullet2">
+              <li>Created a novel transcriptomic metric to accurately compare in-vitro models to
+                Clinical samples, to
                 inform MPS model development, driving in-vitro-to-Clinical-translation. </li>
-              <li>Performed multi-omics data analysis to support the development of Liver Chip and Multi-Organ Chip
+              <li>Performed multi-omics data analysis to support the development of Liver Chip and
+                Multi-Organ Chip
                 platforms.</li>
-              <li>Developed and optimized pipelines for processing single-cell and bulk transcriptomics and proteomics
-                data, enabling rapid and reproducible multi-omics analysis.</li>
-              <li>Developed ODE-based models to simulate complex dynamic systems for drug data in Liver and Multi-Organ
+              <li>Developed ODE-based models to simulate complex dynamic systems for drug data in Liver
+                and Multi-Organ
                 Chips, improving IVIVC and IVIVE outcomes.</li>
-              <li>Conducted disease characterization studies leveraging public clinical data to help develop, validate
+              <li>Conducted disease characterization studies leveraging public clinical data to help
+                develop, validate
                 and refine MPS chip models representing key disease phenotypes stages.</li>
-              <li>Developed Genome-Scale Metabolic Models for metabolic diseases to study facilitate new targets
+              <li>Developed Genome-Scale Metabolic Models for metabolic diseases to study facilitate new
+                targets
                 discovery and understand different drug’s mechanism of action.</li>
-              <li>Developed comprehensive experimental plans, in collaborative efforts with lab scientists, for diverse
-                research projects.</li>
-              <li>Collaborated with external teams to develop a client-facing software product that analyzes Liver Chip
-                Data using predictive algorithms for hepatic metabolism, streamlining data analysis and decision-making
-                processes.</li>
-              <li>Coordinated cross-functional teams of software engineers, data scientists, and laboratory researchers
-                to align deliverables with project goals and timelines.</li>
-              <li>Presented technical insights and project updates to executive stakeholders and clients, effectively
-                translating complex computational findings into actionable business solutions.</li>
-              <li>Co-designed and developed a PostgreSQL-based database to optimize drug data retrieval for data
-                analysis.</li>
-              <li>Supported grant-seeking efforts by conducting literature reviews, contributing to research proposals,
-                and collaborating with different CROs to to optimize grant application processes, budgets, and
-                timelines.
-              </li>
             </ul>
           </div>
           <!-- Job 2 -->
           <div id="job2" class="job-detail hidden fade-in">
-            <h3 class="text-2xl font-semibold">Bioinformatics Intern</h3>
+            <h3 class="text-xl font-semibold">Bioinformatics Research Scientist <a href="https://www.gsk.com/en-gb/"
+                target="_blank" class="text-green-400">@ GSK</a></h3>
+            <div class="text-md text-gray-400">
+              <span> Pre-Clinical Vaccines Lab</span>
+            </div>
             <div class="text-sm text-gray-400 mb-2">
-              <span>June 2020 - December 2020</span> | <span>San Francisco, CA</span>
+              <span>June 2020 - December 2020</span> | <span>Rockville, Maryland</span>
             </div>
             <p class="mt-4">
-              Description for Job 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            <ul class="custom-bullet2">
+              <li>Analyzed NGS long-read data (PacBio) to study vaccine mechanisms of action in self-amplifying
+                mRNA-based platforms.</li>
+              <li>Analyzed NGS data to identify distinct immune response profiles in NHPs vaccinated with different
+                formulations, revealing key mechanisms of vaccine efficacy and potential targets for improvement.</li>
+              <li>Implemented data visualization techniques and ERCC spike-ins throughout the RNA-seq workflow,
+                contributing to improved data quality and reliable gene expression profiling for downstream functional
+                studies.</li>
+            </ul>
             </p>
           </div>
           <!-- Job 3 -->
           <div id="job3" class="job-detail hidden fade-in">
-            <h3 class="text-2xl font-semibold">Research Scientist</h3>
+            <h3 class="text-xl font-semibold">Research Scientist <a href="https://xiuweizhang.wordpress.com/"
+                target="_blank" class="text-green-400">@ Zhang Lab</a></h3>
             <div class="text-sm text-gray-400 mb-2">
-              <span>August 2019 - May 2020</span> | <span>San Francisco, CA</span>
+              <span>August 2019 - May 2020</span> | <span>Atlanta, GA</span>
             </div>
-            <p class="mt-4">
-              Description for Job 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
+            <ul class="custom-bullet2">
+              <li>Benchmarked multiple scRNA-seq tools—including Velocyto and Genie3—for RNA velocity and gene
+                regulatory network inference, revealing tool-specific trade-offs in speed, sensitivity, and accuracy.
+              </li>
+              <li>Developed an end-to-end single-cell RNA-seq pipeline integrating quality control, normalization, and
+                advanced analytics, reducing processing time while enhancing data consistency.</li>
+              <li>Identified critical limitations and best-practice guidelines for robust gene regulation inference,
+                driving methodological improvements and more interpretable results.</li>
+              <li>Collaborated with cross-functional teams to refine analysis protocols, ensuring reproducibility,
+                scalability, and alignment with evolving research goals.</li>
+            </ul>
           </div>
           <div id="job4" class="job-detail hidden fade-in">
-            <h3 class="text-2xl font-semibold">Research Scientist</h3>
+            <h3 class="text-xl font-semibold">Research Scientist <a href="https://storicilab.gatech.edu/"
+                target="_blank" class="text-green-400">@ Storici Lab</a></h3>
             <div class="text-sm text-gray-400 mb-2">
-              <span>August 2019 - May 2020</span> | <span>San Francisco, CA</span>
+              <span>August 2019 - May 2020</span> | <span>Atlanta, GA</span>
             </div>
-            <p class="mt-4">
-              Description for Job 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
+            <ul class="custom-bullet2">
+              <li>Investigated ribonucleotide incorporation in Saccharomyces cerevisiae DNA to understand its impact on
+                genomic stability and replication fidelity.</li>
+              <li>Developed the initial iteration of an ensemble model to predict autonomously replicating site (ARS)
+                firing times, providing early insights into DNA replication dynamics.</li>
+              <li>Collaborated with lab researchers to validate computational findings, bridging in silico predictions
+                with in vitro results for enhanced reproducibility.</li>
+              <li>Piloted an iterative approach to refine the model's predictive accuracy, laying the groundwork for
+                future optimization in replication research.</li>
+
+            </ul>
           </div>
         </div>
       </div>
