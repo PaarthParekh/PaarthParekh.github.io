@@ -154,9 +154,51 @@
             href="assests/PaarthParekh_CV.pdf" download="PaarthParekh_CV.pdf">
             Resume
           </a>
+        </li>
+      </ul>
+      <!-- Mobile Navigation: Hamburger button visible on small screens -->
+      <div class="lg:hidden">
+        <button id="menuButton" class="text-gray-300 hover:text-white focus:outline-none">
+          <!-- Hamburger Icon -->
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
     </div>
-    </li>
-    </ul>
+    <div id="mobileMenu" class="lg:hidden hidden">
+      <ul class="px-2 pt-2 pb-4 space-y-1 bg-gray-900">
+        <li>
+          <a href="#about"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">
+            About
+          </a>
+        </li>
+        <li>
+          <a href="#experience"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">
+            Experience
+          </a>
+        </li>
+        <li>
+          <a href="#projects"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">
+            Projects
+          </a>
+        </li>
+        <li>
+          <a href="#contact"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">
+            Contact
+          </a>
+        </li>
+        <li>
+          <a href="assests/PaarthParekh_CV.pdf" download="PaarthParekh_CV.pdf" target="_blank" rel="noopener noreferrer"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">
+            Resume
+          </a>
+        </li>
+      </ul>
     </div>
   </nav>
 
@@ -362,6 +404,13 @@
     document.addEventListener('DOMContentLoaded', function () {
       const tabs = document.querySelectorAll('#job-tabs li');
       const jobDetails = document.querySelectorAll('.job-detail');
+      const menuButton = document.getElementById("menuButton");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      menuButton.addEventListener("click", function () {
+        mobileMenu.classList.toggle("hidden");
+      });
+
       tabs.forEach(tab => {
         tab.addEventListener('click', function () {
           // Remove 'active' class from all tabs
