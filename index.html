@@ -53,6 +53,55 @@
       background-color: #e2e8f0;
       color: #1a202c;
     }
+
+    /* Fade-down effect applied directly on the <a> element */
+    .fadedown-enter-done {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 500ms ease-in-out 400ms, transform 500ms ease-in-out 400ms;
+    }
+
+    /* Resume Button styling with hover effects */
+    .resume-button {
+      display: inline-block;
+      padding: 0.5rem 1.5rem;
+      border: 1px solid #64ffda;
+      /* Accent color similar to Brittany's site */
+      color: #64ffda;
+      /* Accent text color */
+      background-color: transparent;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 4px;
+      line-height: 1;
+      transition: transform 200ms ease, background-color 200ms ease, box-shadow 200ms ease;
+    }
+
+    .resume-button:hover {
+      /* Move left (-3px on X) and up (-3px on Y) */
+      transform: translate(-3px, -3px);
+      background-color: rgba(100, 255, 218, 0.1);
+      box-shadow: 0 0 0 2px #64ffda;
+    }
+
+    ul.custom-bullet li {
+      list-style: none;
+      /* Remove default bullet */
+      position: relative;
+      padding-left: 1.2em;
+      /* Space for the custom bullet */
+      margin-bottom: 0.5em;
+      margin-right: 0.75rem;
+      /* Optional: spacing between items */
+    }
+
+    ul.custom-bullet li::before {
+      content: "▹";
+      position: absolute;
+      left: 0;
+      color: #66BB6A;
+      /* Customize the bullet color if desired */
+    }
   </style>
 </head>
 
@@ -86,12 +135,12 @@
     <!-- Additional icons can be added similarly -->
   </div>
   <!-- Navigation -->
-  <nav class="fixed top-0 w-full bg-gray-900 z-50 shadow-md">
+  <nav class="fixed top-0 w-full bg-gray-900 z-50 shadow-md pt-4">
     <div class="flex justify-between items-center py-3 px-5">
       <a href="#hero" class="text-2xl font-bold hover:text-gray-300">
         Paarth Parekh
       </a>
-      <ul class="hidden lg:flex space-x-12 text-lg">
+      <ul class="hidden lg:flex space-x-12 text-lg items-center">
         <li><a href="#about" class="hover:text-gray-700"><span
               class="text-green-400 text-lg font-mono">01.</span>About</a></li>
         <li><a href="#experience" class="hover:text-gray-700"><span
@@ -101,12 +150,13 @@
         <li><a href="#contact" class="hover:text-gray-700"><span
               class="text-green-400 text-lg font-mono">04.</span>Contact</a></li>
         <li>
-          <a href="assests/PaarthParekh_CV.pdf" download="PaarthParekh_CV.pdf"
-            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-5 py-3 rounded">
-            My Resume
+          <a class="resume-button fadedown-enter-done" style="transition-delay: 50ms;"
+            href="assests/PaarthParekh_CV.pdf" download="PaarthParekh_CV.pdf">
+            Resume
           </a>
-        </li>
-      </ul>
+    </div>
+    </li>
+    </ul>
     </div>
   </nav>
 
@@ -150,18 +200,18 @@
           <p class="text-lg leading-relaxed mt-6 text-gray-400">
             Here are a few areas I’ve been working on recently:
           </p>
-          <ul class="mt-3 space-y-2 ml-5 text-lg leading-relaxed text-gray-400">
-            <li class="flex items-center">
-              <span class="text-green-400 mr-3">▹</span> Multi-omics data integration and analysis.
+          <ul class="custom-bullet text-gray-400">
+            <li>
+              Multi-omics data integration and analysis.
             </li>
-            <li class="flex items-center">
-              <span class="text-green-400 mr-3">▹</span> ODE-based modeling for drug kinetics.
+            <li>
+              ODE-based modeling for drug kinetics.
             </li>
-            <li class="flex items-center">
-              <span class="text-green-400 mr-3">▹</span> Genome-scale metabolic models for target discovery.
+            <li>
+              Genome-scale metabolic models for target discovery.
             </li>
-            <li class="flex items-center">
-              <span class="text-green-400 mr-3">▹</span> Automated data pipelines for rapid, reproducible research.
+            <li>
+              Automated data pipelines for rapid, reproducible research.
             </li>
           </ul>
         </div>
@@ -189,13 +239,16 @@
         <!-- Job Titles (Tabs) -->
         <ul id="job-tabs" class="md:w-1/4 border-r border-gray-700">
           <li class="cursor-pointer p-4 border-b border-gray-700 active fade-in" data-job="job1">
-            Bioinformatics Scientist II
+            Javelin Biotech, inc.
           </li>
           <li class="cursor-pointer p-4 border-b border-gray-700 fade-in" data-job="job2">
-            Bioinformatics Scientst
+            GSK Vaccines
           </li>
           <li class="cursor-pointer p-4 border-b border-gray-700 fade-in" data-job="job3">
-            Research Scientist
+            Zhang Lab
+          </li>
+          <li class="cursor-pointer p-4 border-b border-gray-700 fade-in" data-job="job4">
+            Storici Lab
           </li>
         </ul>
 
@@ -203,11 +256,12 @@
         <div id="job-content" class="md:w-3/4 p-4">
           <!-- Job 1 -->
           <div id="job1" class="job-detail fade-in">
-            <h3 class="text-2xl font-semibold">Bioinformatics Scientist II</h3>
+            <h3 class="text-xl font-semibold">Bioinformatics Scientist II <a href="https://javelinbiotech.com/"
+                target="_blank" class="text-green-400">@Javelin Biotech</a></h3>
             <div class="text-sm text-gray-400 mb-2">
               <span>June 2021 - Present</span> | <span>Woburn, MA</span>
             </div>
-            <p class="mt-4">
+            <ul class="custom-bullet">
               <li>Created a novel transcriptomic metric to accurately compare in-vitro models to Clinical samples, to
                 inform MPS model development, driving in-vitro-to-Clinical-translation. </li>
               <li>Performed multi-omics data analysis to support the development of Liver Chip and Multi-Organ Chip
@@ -235,7 +289,7 @@
                 and collaborating with different CROs to to optimize grant application processes, budgets, and
                 timelines.
               </li>
-            </p>
+            </ul>
           </div>
           <!-- Job 2 -->
           <div id="job2" class="job-detail hidden fade-in">
@@ -249,6 +303,15 @@
           </div>
           <!-- Job 3 -->
           <div id="job3" class="job-detail hidden fade-in">
+            <h3 class="text-2xl font-semibold">Research Scientist</h3>
+            <div class="text-sm text-gray-400 mb-2">
+              <span>August 2019 - May 2020</span> | <span>San Francisco, CA</span>
+            </div>
+            <p class="mt-4">
+              Description for Job 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+          <div id="job4" class="job-detail hidden fade-in">
             <h3 class="text-2xl font-semibold">Research Scientist</h3>
             <div class="text-sm text-gray-400 mb-2">
               <span>August 2019 - May 2020</span> | <span>San Francisco, CA</span>
@@ -299,7 +362,6 @@
     document.addEventListener('DOMContentLoaded', function () {
       const tabs = document.querySelectorAll('#job-tabs li');
       const jobDetails = document.querySelectorAll('.job-detail');
-
       tabs.forEach(tab => {
         tab.addEventListener('click', function () {
           // Remove 'active' class from all tabs
