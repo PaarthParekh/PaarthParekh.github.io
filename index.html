@@ -50,8 +50,7 @@
 
     /* Custom styling for the active tab in Experience/Jobs section */
     .active {
-      background-color: #e2e8f0;
-      color: #1a202c;
+      background-color: transparent;
     }
 
     /* Fade-down effect applied directly on the <a> element */
@@ -291,26 +290,26 @@
     </div>
   </section>
 
-  <section id="experience" class="min-h-screen py-20 scroll-mt-20 bg-gray-800">
+  <section id="experience" class="py-20 scroll-mt-20">
     <div class="max-w-5xl mx-auto px-6">
       <h2 class="text-4xl font-bold flex items-center space-x-6 mb-8 fade-in">
         <span class="text-green-400 text-2xl font-mono">02.</span>
         <span class="text-gray-200">Experience</span>
         <span class="w-32 h-[2px] bg-gray-600 hidden md:inline-block"></span>
       </h2>
-      <div class="flex flex-col md:flex-row">
+      <div class="flex min-h-[350px] md:flex-row">
         <!-- Job Titles (Tabs) -->
-        <ul id="job-tabs" class="md:w-1/4 border-r border-gray-700">
-          <li class="cursor-pointer p-4 border-b border-gray-700 active fade-in" data-job="job1">
+        <ul id="job-tabs" class="md:w-1/4 border-l border-gray-700 flex flex-col">
+          <li class="cursor-pointer p-4 active text-green-600 fade-in border-l border-green-800" data-job="job1">
             Javelin Biotech, inc.
           </li>
-          <li class="cursor-pointer p-4 border-b border-gray-700 fade-in" data-job="job2">
+          <li class="cursor-pointer p-4 fade-in" data-job="job2">
             GSK Vaccines
           </li>
-          <li class="cursor-pointer p-4 border-b border-gray-700 fade-in" data-job="job3">
+          <li class="cursor-pointer p-4 fade-in" data-job="job3">
             Zhang Lab
           </li>
-          <li class="cursor-pointer p-4 border-b border-gray-700 fade-in" data-job="job4">
+          <li class="cursor-pointer p-4 fade-in" data-job="job4">
             Storici Lab
           </li>
         </ul>
@@ -375,7 +374,7 @@
             <h3 class="text-xl font-semibold">Research Scientist <a href="https://xiuweizhang.wordpress.com/"
                 target="_blank" class="text-green-400">@ Zhang Lab</a></h3>
             <div class="text-sm text-gray-400 mb-2">
-              <span>August 2019 - May 2020</span> | <span>Atlanta, GA</span>
+              <span>Jan 2021 - May 2021</span> | <span>Atlanta, GA</span>
             </div>
             <ul class="custom-bullet2">
               <li>Benchmarked multiple scRNA-seq tools—including Velocyto and Genie3—for RNA velocity and gene
@@ -499,7 +498,9 @@
         tab.addEventListener('click', function () {
           // Remove 'active' class from all tabs
           tabs.forEach(t => t.classList.remove('active'));
-
+          tabs.forEach(t => t.classList.remove('text-green-600'));
+          tabs.forEach(t => t.classList.remove('border-l'));
+          tabs.forEach(t => t.classList.remove('border-green-800'));
           // Hide all job details
           jobDetails.forEach(detail => detail.classList.add('hidden'));
 
@@ -507,8 +508,12 @@
           const jobId = tab.getAttribute('data-job');
           document.getElementById(jobId).classList.remove('hidden');
 
-          // Mark the clicked tab as active
+
+          // Mark the clicked tab as active and change color to green
           tab.classList.add('active');
+          tab.classList.add('text-green-600');
+          tab.classList.add('border-l');
+          tab.classList.add('border-green-800');
         });
       });
     });
