@@ -8,215 +8,7 @@
   <!-- Include Tailwind CSS from CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Optional: Your own stylesheet can be linked here -->
-  <link rel="stylesheet" href="styles.css" />
-  <style>
-    /* Fade-in animation */
-    .fade-in {
-      animation: fadeIn 1.5s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-
-      to {
-        opacity: 1;
-      }
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    /* Ensure the flex container aligns children at the top */
-    #experience .flex {
-      align-items: flex-start;
-    }
-
-    /* Job Tabs List: display as a row on mobile, column on desktop */
-    #job-tabs {
-      display: flex;
-      flex-direction: row;
-      /* Mobile: tabs in a row */
-      padding: 1rem;
-      gap: 0.5rem;
-    }
-
-    /* On desktop, change flex direction and spacing */
-    @media (min-width: 768px) {
-      #job-tabs {
-        flex-direction: column;
-        /* Desktop: tabs in a column */
-        gap: 0.5rem;
-        /* Use vertical spacing (space-y-2) */
-      }
-    }
-
-    /* Individual Job Tabs */
-    #job-tabs li {
-      cursor: pointer;
-      padding: 0.5rem;
-      font-size: 1rem;
-      font-weight: 500;
-      color: #d1d5db;
-      position: relative;
-      transition: color 0.3s ease;
-    }
-
-    /* Hover Effect */
-    #job-tabs li:hover {
-      color: #64ffda;
-    }
-
-    /* Active Tab Styling for Mobile: bottom border */
-    #job-tabs li.active {
-      color: #64ffda;
-      font-weight: 600;
-      border-bottom: 2px solid #64ffda;
-      /* Active bottom border on mobile */
-    }
-
-    /* Active Tab Indicator for Desktop: left border via pseudo-element */
-    @media (min-width: 768px) {
-      #job-tabs li.active {
-        border-bottom: none;
-        /* Remove mobile bottom border on desktop */
-      }
-
-      #job-tabs li.active::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 3px;
-        height: 100%;
-        background-color: #64ffda;
-        transition: background-color 0.3s ease;
-      }
-    }
-
-    /* Dropdown styling for desktop */
-    .dropdown {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background-color: #1f2937;
-      /* gray-800 */
-      border: 1px solid #374151;
-      /* gray-700 */
-      border-radius: 0.25rem;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-      min-width: 10rem;
-      z-index: 50;
-      opacity: 0;
-      transform: translateY(-10px);
-      transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
-    }
-
-    /* Show dropdown on hover (desktop) */
-    .group:hover .dropdown {
-      display: block;
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Fixed Social Icons Sidebar */
-    .social-icons {
-      position: fixed;
-      left: 2rem;
-      bottom: 2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      z-index: 50;
-    }
-
-    .social-icons a {
-      transition: transform 0.2s;
-    }
-
-    .social-icons a:hover {
-      transform: translateY(-4px);
-    }
-
-    /* Custom styling for the active tab in Experience/Jobs section */
-    .active {
-      background-color: transparent;
-    }
-
-    /* Fade-down effect applied directly on the <a> element */
-    .fadedown-enter-done {
-      opacity: 1;
-      transform: translateY(0);
-      transition: opacity 500ms ease-in-out 400ms, transform 500ms ease-in-out 400ms;
-    }
-
-    /* Resume Button styling with hover effects */
-    .custom-button {
-      display: inline-block;
-      padding: 0.5rem 1.5rem;
-      border: 1px solid #64ffda;
-      /* Accent color similar to Brittany's site */
-      color: #64ffda;
-      /* Accent text color */
-      background-color: transparent;
-      text-decoration: none;
-      font-weight: 600;
-      border-radius: 4px;
-      line-height: 1;
-      transition: transform 200ms ease, background-color 200ms ease, box-shadow 200ms ease;
-    }
-
-    .custom-button:hover {
-      /* Move left (-3px on X) and up (-3px on Y) */
-      transform: translate(-3px, -3px);
-      background-color: rgba(100, 255, 218, 0.1);
-      box-shadow: 0 0 0 2px #64ffda;
-    }
-
-    ul.custom-bullet li {
-      list-style: none;
-      /* Remove default bullet */
-      position: relative;
-      padding-left: 1.2em;
-      font-size: medium;
-      /* Space for the custom bullet */
-      margin-bottom: 0.5em;
-      margin-right: 0.75rem;
-      /* Optional: spacing between items */
-    }
-
-    ul.custom-bullet li::before {
-      content: "▹";
-      position: absolute;
-      left: 0;
-      color: #66BB6A;
-      /* Customize the bullet color if desired */
-    }
-
-    ul.custom-bullet2 li {
-      list-style: none;
-      /* Remove default bullet */
-      position: relative;
-      padding-left: 1.2em;
-      font-size: 0.99rem;
-      /* Space for the custom bullet */
-      margin-bottom: 0.5em;
-      margin-right: 0.75rem;
-      /* Optional: spacing between items */
-    }
-
-    ul.custom-bullet2 li::before {
-      content: "▹";
-      position: absolute;
-      left: 0;
-      color: #66BB6A;
-      /* Customize the bullet color if desired */
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body class="bg-gray-900 text-white">
@@ -238,12 +30,12 @@
           d="M100.28 448H7.4V148.9h92.88V448ZM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3ZM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448h-.1Z"
           fill="currentColor"></path>
       </svg></a>
-    <a aria-label="Link to my Resume" href="assests/PaarthParekh_CV.pdf" rel="noreferrer noopener" target="_blank">
+    <a aria-label="Link to my Resume" href="assets/PaarthParekh_CV.pdf" rel="noreferrer noopener" target="_blank">
       <div class="aspect-square size-12 rounded bg-black-primary p-2 text-white-primary 
              duration-300 hover:text-[color:var(--highlight)] 
              dark:bg-white-primary dark:text-black-primary
              flex items-center justify-center">
-        <img src="assests/icons/approved.png" alt="Resume Icon" class="max-w-full max-h-full object-contain" />
+        <img src="assets/icons/approved.png" alt="Resume Icon" class="max-w-full max-h-full object-contain" />
       </div>
     </a>
   </div>
@@ -278,8 +70,8 @@
         </li>
         <li><a href="#contact" class="hover:text-gray-700">Contact</a></li>
         <li>
-          <a class="custom-button fadedown-enter-done" style="transition-delay: 50ms;"
-            href="assests/PaarthParekh_CV.pdf" download="PaarthParekh_CV.pdf">
+          <a class="custom-button fadedown-enter-done" style="transition-delay: 50ms;" href="assets/PaarthParekh_CV.pdf"
+            download="PaarthParekh_CV.pdf">
             Curriculum vitae
           </a>
         </li>
@@ -326,7 +118,7 @@
           </a>
         </li>
         <li>
-          <a href="assests/PaarthParekh_CV.pdf" download="PaarthParekh_CV.pdf" target="_blank" rel="noopener noreferrer"
+          <a href="assets/PaarthParekh_CV.pdf" download="PaarthParekh_CV.pdf" target="_blank" rel="noopener noreferrer"
             class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">
             CV
           </a>
@@ -336,10 +128,15 @@
   </nav>
 
   <!-- Home Section -->
-  <header id="home" class="h-screen flex flex-col justify-center items-center text-center pt-20">
-    <h1 class="text-6xl font-bold mb-4 fade-in">Hello, I'm Paarth</h1>
-    <p class="text-2xl fade-in">I build computational models and data-driven solutions that transform complex datasets
-      into actionable insights..</p>
+  <header id="home"
+    class="relative h-screen flex flex-col justify-center items-center text-center pt-20 overflow-hidden">
+    <!-- Particles Background -->
+    <div id="particles-js" class="absolute inset-0 z-0"></div>
+    <div class="relative z-10 pointer-events-none">
+      <h1 class="text-6xl font-bold mb-4 fade-in">Hello, I'm Paarth</h1>
+      <p class="text-2xl typewriter">Technical Implementation Consultant driving financial software solutions and
+        complex system integrations.</p>
+    </div>
   </header>
 
   <!-- About Section -->
@@ -353,21 +150,22 @@
         <!-- Text Column -->
         <div class="md:w-3/5 pr-12 fade-in">
           <p class="text-lg leading-relaxed mb-4 text-gray-400">
-            Hello, I’m Paarth Parekh.I’m passionate about transforming complex biological data into actionable insights
-            through computational modeling and bioinformatics. My journey began when I realized that raw omics data
-            could be translated into models that could drive disease modeling, predict drug behavior, and guide clinical
-            decisions for drug development.
+            I am a Technical Implementation Consultant and Data Scientist with 6+ years of experience bridging the gap
+            between complex engineering and client success. My expertise lies in architecting scalable data platforms,
+            managing technical implementations, and ensuring that software deployments drive real business value.
           </p>
           <p class="text-lg leading-relaxed mb-4 text-gray-400">
-            With experience ranging from <a href="https://www.gsk.com/en-gb/" target="_blank"
-              class="text-green-400">established biotech</a>
-            environments to
-            <a href="https://javelinbiotech.com/" target="_blank" class="text-green-400">innovative
-              start-ups</a>, I've honed skills in multi-omics integration, data pipeline optimization, and predictive
-            modeling. Currently, I'm focused on developing computational tools and client-facing software to streamline
-            drug discovery and improve in vitro-to-clinical translation, working closely with cross-functional teams.
-
+            Currently, I work in the Fintech space at <a href="https://www.crd.com/" target="_blank"
+              class="text-green-400">Charles River Development</a>, where I lead technical implementation and client
+            delivery. I help institutional clients navigate complex software deployments, translating business goals
+            into technical reality using custom tools and cloud infrastructures.
           </p>
+          <p class="text-lg leading-relaxed mb-4 text-gray-400">
+            Prior to Fintech, I spent four years at a startup wearing multiple hats from software development to project
+            management. I led client onboarding for a predictive analytics platform and partnered with engineers to
+            design production-grade data pipelines.
+          </p>
+
           <p class="text-lg leading-relaxed mb-4 text-gray-400">
             Outside of work, I enjoy cooking, experimenting with new recipes, and traveling to explore diverse cultures
             and destinations.
@@ -376,18 +174,10 @@
             Here are a few areas I’ve been working on recently:
           </p>
           <ul class="custom-bullet text-gray-400">
-            <li>
-              Multi-omics data integration and analysis.
-            </li>
-            <li>
-              ODE-based modeling for drug kinetics.
-            </li>
-            <li>
-              Genome-scale metabolic models for target discovery.
-            </li>
-            <li>
-              Automated data pipelines for rapid, reproducible research.
-            </li>
+            <li>Implementation Delivery & Technical Execution</li>
+            <li>ETL Pipelines & Multi-tier Architectures</li>
+            <li>Java, C#, SQL, AWS</li>
+            <li>Stakeholder Management</li>
           </ul>
         </div>
         <!-- Image Column -->
@@ -399,7 +189,7 @@
             </div>
 
             <!-- Square Profile Image -->
-            <img src="assests/IMG_7643.jpg" alt="Profile Picture"
+            <img src="assets/IMG_7643.jpg" alt="Profile Picture"
               class="w-full h-full object-cover shadow-lg transform md:translate-x-[15px] md:translate-y-[15px] transition-all duration-300" />
           </div>
         </div>
@@ -419,7 +209,10 @@
         <div id="job-tabs-container" class="w-full md:w-1/4 md:border-l md:border-gray-700">
           <!-- Job Tabs List: horizontally arranged on mobile, vertically on desktop -->
           <ul id="job-tabs" class="flex flex-row md:flex-col p-4 space-x-2 md:space-x-0 md:space-y-2">
-            <li class="text-lg cursor-pointer p-2 md:p-4 active text-green-600 fade-in" data-job="job1">
+            <li class="text-lg cursor-pointer p-2 md:p-4 active text-green-600 fade-in" data-job="job0">
+              Charles River Development
+            </li>
+            <li class="text-lg cursor-pointer p-2 md:p-4 fade-in" data-job="job1">
               Javelin Biotech, inc.
             </li>
             <li class="text-lg cursor-pointer p-2 md:p-4 fade-in" data-job="job2">
@@ -437,93 +230,105 @@
 
         <!-- Job Details -->
         <div id="job-content" class="w-full md:w-3/4 p-4">
-          <!-- Job 1 -->
-          <div id="job1" class="job-detail fade-in">
-            <h3 class="text-xl font-semibold">Bioinformatics Scientist II <a href="https://javelinbiotech.com/"
-                target="_blank" class="text-green-400">@Javelin Biotech</a></h3>
+          <!-- Job 0: Charles River Development -->
+          <div id="job0" class="job-detail fade-in">
+            <h3 class="text-xl font-semibold">Technical Implementation Consultant <a href="https://www.crd.com/"
+                target="_blank" class="text-green-400">@ Charles River Development</a></h3>
             <div class="text-md text-gray-400">
-              <span> Bioinformatics and Computational Modeling</span>
+              <span>Client Delivery & Implementation</span>
             </div>
             <div class="text-sm text-gray-400 mb-2">
-              <span>June 2021 - Present</span> | <span>Woburn, MA</span>
+              <span>Aug 2025 - Present</span> | <span>Massachusetts, USA</span>
             </div>
             <ul class="custom-bullet2">
-              <li>Developed multi-omics analysis pipelines, enabling reproducibility and scalability for disease
-                characterization studies using public clinical datasets, refining MPS
-                chip models to capture critical disease phenotypes and stages.
-              </li>
-              <li>Engineered robust, scalable data pipelines with Nextflow and Python to efficiently process large-scale
-                datasets—enhancing reproducibility and accelerating downstream analyses for data-driven insights.</li>
-              <li>Developed machine learning approaches and ODE-based mechanistic models to simulate drug kinetics in
-                Liver and multi-organ Chips, optimizing IVIVC and IVIVE outcomes for preclinical programs.</li>
-              <li>Applied network inference and pathway-level analytics to interpret omics signatures and elucidate
-                mechanisms of action for metabolic and hepatic diseases.</li>
-              <li>Developed a transcriptomic metric integrating clinical and in vitro data, supporting model development
-                and validation to improve pre-clinical to clinical translation by ensuring the presence of relevant
-                hallmarks.</li>
-              <li>
-                For more details, feel free to explore my
-                <a href="assests/PaarthParekh_CV.pdf" download="PaarthParekh_CV.pdf" target="_blank"
-                  rel="noopener noreferrer" class="text-green-400 underline hover:text-green-500">
-                  CV.</a>
-              </li>
+              <li>Lead technical implementation and client delivery, helping institutional clients navigate complex
+                software deployments and translating business goals into technical reality.</li>
+              <li>Architect scalable data platforms and manage the full client lifecycle, from technical development to
+                troubleshooting and optimization.</li>
+              <li>Build robust ETL pipelines and multi-tier architectures using Python, Java, and C# to ensure seamless
+                interpretation and data flow.</li>
+              <li>Partner with business stakeholders to design production-grade solutions that drive real business value
+                in the Fintech space.</li>
+            </ul>
+          </div>
+          <!-- Job 1 -->
+          <div id="job1" class="job-detail hidden fade-in">
+            <h3 class="text-xl font-semibold">Computer Scientist II <a href="https://javelinbiotech.com/"
+                target="_blank" class="text-green-400">@Javelin Biotech</a></h3>
+            <div class="text-md text-gray-400">
+              <span>Leadership, Client Implementation, and Product Delivery</span>
+            </div>
+            <div class="text-sm text-gray-400 mb-2">
+              <span>June 2021 - July 2025</span> | <span>Woburn, MA</span>
+            </div>
+            <ul class="custom-bullet2">
+              <li><strong>Technical Implementation Lead</strong>: Led the client onboarding lifecycle for a predictive
+                analytics platform, serving as the primary bridge between external stakeholders and internal engineering
+                teams.</li>
+              <li><strong>Product Engineering</strong>: Collaborated with software engineers to design and deploy
+                production-grade data pipelines using Python and Bash, ensuring reproducibility and scalability for
+                complex datasets.</li>
+              <li><strong>Data Strategy</strong>: Transformed unstructured experimental data into structured SQL/NoSQL
+                formats to support the development of interactive dashboards and predictive models.</li>
+              <li><strong>Stakeholder Management</strong>: Translated complex technical requirements into actionable
+                project roadmaps, significantly reducing troubleshooting time during client deployments.</li>
             </ul>
           </div>
           <!-- Job 2 -->
           <div id="job2" class="job-detail hidden fade-in">
-            <h3 class="text-xl font-semibold">Bioinformatics Research Scientist <a href="https://www.gsk.com/en-gb/"
-                target="_blank" class="text-green-400">@ GSK</a></h3>
+            <h3 class="text-xl font-semibold">Data Scientist Co-Op <a href="https://www.gsk.com/en-gb/" target="_blank"
+                class="text-green-400">@ GSK</a></h3>
             <div class="text-md text-gray-400">
-              <span> Pre-Clinical Vaccines Lab</span>
+              <span>Data Analysis, Scripting, and Modeling</span>
             </div>
             <div class="text-sm text-gray-400 mb-2">
               <span>June 2020 - December 2020</span> | <span>Rockville, Maryland</span>
             </div>
             <p class="mt-4">
             <ul class="custom-bullet2 text-lg">
-              <li>Conducted single-cell transcriptomic analysis to investigate immunological response in a
-                self-amplifying mRNA vaccine platform</li>
-              <li>Processed and analyzed long-read NGS data (PacBio) to characterize mRNA vaccine constructs, applying
-                tools like Minimap2 and SAMtools in a Linux-based analysis environment.</li>
-              <li>Partnered with immunologists, molecular biologists, and biostatisticians to interpret large-scale
-                datasets, effectively merging computational insights with experimental validation.</li>
-              <li>Enhanced reproducibility through rigorous data visualization and spike-in controls (ERCC standards),
-                resulting in high-fidelity gene expression profiles for downstream functional analyses.</li>
+              <li><strong>Data Science & Analytics</strong>: Developed automated analysis scripts in R and Python to
+                process high-dimensional datasets, replacing manual workflows and increasing data throughput.</li>
+              <li><strong>Statistical Modeling</strong>: Built and validated statistical models to simulate complex
+                system behaviors, directly supporting critical decision-making for research operations.</li>
+              <li><strong>Pipeline Development</strong>: Optimized data ingestion workflows and maintained
+                version-controlled codebases (Git) to ensure data integrity across cross-functional teams.</li>
+              <li><strong>Visualization</strong>: Created technical visualizations and reports that simplified complex
+                data trends for non-technical audiences and executive leadership.</li>
             </ul>
             </p>
           </div>
-          <!-- Job 3 -->
           <div id="job3" class="job-detail hidden fade-in">
-            <h3 class="text-xl font-semibold">Research Scientist <a href="https://xiuweizhang.wordpress.com/"
+            <h3 class="text-xl font-semibold">Graduate Research Assistant <a href="https://xiuweizhang.wordpress.com/"
                 target="_blank" class="text-green-400">@ Zhang Lab</a></h3>
             <div class="text-sm text-gray-400 mb-2">
               <span>Jan 2021 - May 2021</span> | <span>Atlanta, GA</span>
             </div>
             <ul class="custom-bullet2 text-lg">
-              <li>Benchmarked multiple scRNA-seq tools for RNA velocity and gene
-                regulatory network inference, revealing tool-specific trade-offs in speed, sensitivity, and accuracy.
-              </li>
-              <li>Developed an end-to-end single-cell RNA-seq pipeline integrating quality control, normalization, and
-                advanced analytics, reducing processing time while enhancing data consistency.</li>
-              <li>Identified critical limitations and best-practice guidelines for robust gene regulation inference,
-                driving methodological improvements and more interpretable results.</li>
+              <li><strong>Algorithm Benchmarking</strong>: Evaluated multiple computational tools for velocity analysis
+                and network inference, identifying trade-offs in computational speed, sensitivity, and accuracy.</li>
+              <li><strong>Pipeline Engineering</strong>: Built an end-to-end data processing pipeline integrating
+                quality control, normalization, and advanced analytics, reducing processing time while enhancing data
+                consistency.</li>
+              <li><strong>Data Quality Control</strong>: Established best-practice guidelines for robust inference from
+                noisy datasets, driving methodological improvements and more interpretable results.</li>
             </ul>
           </div>
           <div id="job4" class="job-detail hidden fade-in">
-            <h3 class="text-xl font-semibold">Research Scientist <a href="https://storicilab.gatech.edu/"
+            <h3 class="text-xl font-semibold">Graduate Research Assistant <a href="https://storicilab.gatech.edu/"
                 target="_blank" class="text-green-400">@ Storici Lab</a></h3>
             <div class="text-sm text-gray-400 mb-2">
               <span>August 2019 - May 2020</span> | <span>Atlanta, GA</span>
             </div>
             <ul class="custom-bullet2 text-lg">
-              <li>Developed and optimized an ETL pipeline to analyze the ribonucleotide incorporation in Saccharomyces
-                cerevisiae DNA, enabling comprehensive downstream analysis.</li>
-              <li>Built a machine learning model leveraging the transformed dataset to predict the firing times of
-                autonomously replicating sites (ARS), providing novel insights into DNA replication processes.</li>
-              <li>Collaborated with lab researchers to validate computational findings, bridging in silico predictions
-                with in vitro results for enhanced reproducibility.</li>
-              <li>Piloted an iterative approach to refine the model's predictive accuracy, laying the groundwork for
-                future optimization in replication research.</li>
+              <li><strong>ETL Pipeline Design</strong>: Developed and optimized an ETL pipeline to transform raw
+                sequencing data into structured formats, enabling comprehensive downstream analysis.</li>
+              <li><strong>Machine Learning & Predictive Modeling</strong>: Built a predictive model leveraging
+                transformed datasets to forecast complex replication events, providing novel insights into system
+                behaviors.</li>
+              <li><strong>Data Validation</strong>: Collaborated with domain experts to validate computational findings,
+                bridging in silico predictions with experimental results for enhanced reproducibility.</li>
+              <li><strong>Model Optimization</strong>: Piloted an iterative approach to refine the model's predictive
+                accuracy, laying the groundwork for furture scaling on larger datasets.</li>
             </ul>
           </div>
         </div>
@@ -585,12 +390,12 @@
             d="M100.28 448H7.4V148.9h92.88V448ZM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3ZM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448h-.1Z"
             fill="currentColor"></path>
         </svg></a>
-      <a aria-label="Link to my Resume" href="assests/PaarthParekh_CV.pdf" rel="noreferrer noopener" target="_blank">
+      <a aria-label="Link to my Resume" href="assets/PaarthParekh_CV.pdf" rel="noreferrer noopener" target="_blank">
         <div class="aspect-square size-12 rounded bg-black-primary p-2 text-white-primary 
              duration-300 hover:text-[color:var(--highlight)] 
              dark:bg-white-primary dark:text-black-primary
              flex items-center justify-center">
-          <img src="assests/icons/approved.png" alt="Resume Icon" class="max-w-full max-h-full object-contain" />
+          <img src="assets/icons/approved.png" alt="Resume Icon" class="max-w-full max-h-full object-contain" />
         </div>
       </a>
     </div>
@@ -600,7 +405,9 @@
       </a>
     </div>
     <p>&copy; 2025 Paarth Parekh. All rights reserved.</p>
-    <p>Last Updated on Feb 09 2025</p>
+
+    <p class="text-sm text-gray-500 mt-2">Last Updated on Feb 07, 2026</p>
+
   </footer>
 
   <!-- JavaScript to handle tab switching for Experience -->
@@ -641,6 +448,115 @@
           tab.classList.add('text-green-600');
         });
       });
+    });
+  </script>
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 80,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#64ffda"
+        },
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 0,
+            "color": "#000000"
+          },
+          "polygon": {
+            "nb_sides": 5
+          }
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": false,
+          "anim": {
+            "enable": false,
+            "speed": 1,
+            "opacity_min": 0.1,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 3,
+          "random": true,
+          "anim": {
+            "enable": false,
+            "speed": 40,
+            "size_min": 0.1,
+            "sync": false
+          }
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 6,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": {
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 1200
+          }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "grab"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 140,
+            "line_linked": {
+              "opacity": 1
+            }
+          },
+          "bubble": {
+            "distance": 400,
+            "size": 40,
+            "duration": 2,
+            "opacity": 8,
+            "speed": 3
+          },
+          "repulse": {
+            "distance": 200,
+            "duration": 0.4
+          },
+          "push": {
+            "particles_nb": 4
+          },
+          "remove": {
+            "particles_nb": 2
+          }
+        }
+      },
+      "retina_detect": true
     });
   </script>
 </body>
