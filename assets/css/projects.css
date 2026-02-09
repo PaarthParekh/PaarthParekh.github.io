@@ -1,0 +1,24 @@
+/* Styling for Project Cards */
+.project-card {
+    background-color: #1f2937;
+    /* gray-800 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border: 1px solid #64ffda;
+}
+
+/* Tag/Badge Styling */
+.tech-tag {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    background-color: rgba(100, 255, 218, 0.1);
+    color: #64ffda;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}

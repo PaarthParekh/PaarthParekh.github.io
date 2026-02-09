@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paarth Parekh - Projects</title>
+    <!-- Include Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Optional: Your own stylesheet can be linked here -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/projects.css">
+</head>
+
+<body class="bg-gray-900 text-white">
+    <!-- Social Icons Sidebar -->
+    <div class="social-icons hidden xl:flex items-center space-x-4">
+        <!-- GitHub Icon -->
+        <a aria-label="Link to my Github" href="https://github.com/PaarthParekh" rel="noreferrer noopener"
+            target="_blank"><svg fill="none" viewBox="0 0 61 65" xmlns="http://www.w3.org/2000/svg"
+                class="aspect-square size-12 rounded bg-black-primary p-2 text-white-primary duration-300 hover:text-[color:var(--highlight)] dark:bg-white-primary dark:text-black-primary">
+                <path
+                    d="M60.258 23.833A17.781 17.781 0 0 0 56.3 12.715a17.932 17.932 0 0 0-.772-10.813 2.385 2.385 0 0 0-1.503-1.38c-.966-.33-4.621-.951-12.07 3.876a35.975 35.975 0 0 0-9.82-1.185c-3.317-.06-6.627.34-9.835 1.186C14.66-.54 10.686.26 9.886.495a2.414 2.414 0 0 0-1.504 1.407 17.93 17.93 0 0 0-.8 10.786 16.849 16.849 0 0 0-3.944 11.2c0 15.255 8.73 19.862 16.73 21.49a12.89 12.89 0 0 0-.84 3.13 1.336 1.336 0 0 0 0 .346v4.22c-7.283.607-8.841-3.655-8.993-4.138a3.208 3.208 0 0 0-.126-.331 12.207 12.207 0 0 0-6.896-6.138 2.414 2.414 0 1 0-1.53 4.58 7.295 7.295 0 0 1 3.917 3.35c.966 3.131 4.911 8.083 13.6 7.531v3.973a2.414 2.414 0 0 0 4.828 0V49.032a6.899 6.899 0 0 1 1.75-3.766A2.4 2.4 0 0 0 24.7 41.13c-8.414-.98-16.192-3.752-16.192-17.338h-.001a11.867 11.867 0 0 1 3.53-8.855 2.564 2.564 0 0 0 .553-2.565 11.955 11.955 0 0 1-.152-7.31 20.979 20.979 0 0 1 8.151 3.82 2.47 2.47 0 0 0 2.124.29 29.81 29.81 0 0 1 9.463-1.283c3.198-.084 6.388.35 9.448 1.283a2.457 2.457 0 0 0 2.124-.29 21.672 21.672 0 0 1 7.807-3.794 12.21 12.21 0 0 1-.18 7.38 2.388 2.388 0 0 0 .47 2.345 13.437 13.437 0 0 1 3.627 8.979c0 13.558-8.18 16.372-16.193 17.338a2.401 2.401 0 0 0-1.158 4.318c.855.648 1.848 2.468 1.848 5.516v10.924a2.413 2.413 0 1 0 4.827 0V50.964a14.707 14.707 0 0 0-1.034-5.614c6.482-1.378 16.496-5.64 16.496-21.517Z"
+                    fill="currentColor"></path>
+            </svg></a>
+        <!-- LinkedIn Icon -->
+        <a aria-label="Link to my LinkedIn" href="https://www.linkedin.com/in/parekhpaarth/" rel="noreferrer noopener"
+            target="_blank"><svg viewBox="0 0 448 448" xmlns="http://www.w3.org/2000/svg"
+                class="aspect-square size-12 rounded bg-black-primary p-2 text-white-primary duration-300 hover:text-[color:var(--highlight)] dark:bg-white-primary dark:text-black-primary">
+                <path
+                    d="M100.28 448H7.4V148.9h92.88V448ZM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3ZM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448h-.1Z"
+                    fill="currentColor"></path>
+            </svg></a>
+        <a aria-label="Link to my Resume" href="assets/PaarthParekh_CV.pdf" rel="noreferrer noopener" target="_blank">
+            <div class="aspect-square size-12 rounded bg-black-primary p-2 text-white-primary 
+             duration-300 hover:text-[color:var(--highlight)] 
+             dark:bg-white-primary dark:text-black-primary
+             flex items-center justify-center">
+                <img src="assets/icons/approved.png" alt="Resume Icon" class="max-w-full max-h-full object-contain" />
+            </div>
+        </a>
+    </div>
+    <!--Email Address-->
+    <div class="fixed right-0 hidden xl:flex bottom-4 flex flex-col items-center pr-4 space-y-4 z-50">
+        <a href="#" onclick="copyEmail(event)" class="text-sm text-white-400 hover:text-green-400"
+            style="writing-mode: vertical-rl; text-orientation: mixed;">
+            paarthparekh2824@gmail.com
+        </a>
+        <!-- Vertical Line -->
+        <div class="h-20 border-l border-gray-400"></div>
+    </div>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full glass-nav z-50 shadow-md pt-4">
+        <div class="flex justify-between items-center py-3 px-5">
+            <a href="index.html" class="text-2xl font-bold hover:text-gray-300">
+                Paarth Parekh
+            </a>
+            <ul class="hidden lg:flex space-x-12 text-lg items-center">
+                <li><a href="index.html#about" class="hover:text-gray-700">About</a></li>
+                <li><a href="index.html#experience" class="hover:text-gray-700">Experience</a></li>
+                <li class="relative group">
+                    <a href="projects.html" class="hover:text-gray-700 text-green-400 font-semibold">Projects</a>
+                    <!-- Dropdown submenu (desktop) -->
+                    <ul class="dropdown">
+                        <li><a href="projects.html"
+                                class="block px-3 py-2 hover:bg-gray-700 hover:text-green-400 font-normal text-white">Projects</a>
+                        </li>
+                        <li><a href="https://scholar.google.com/citations?hl=en&user=3jB9dxQAAAAJ&view_op=list_works&authuser=4&gmla=AGd7smEp8NrfQO90Rtmh2HMXa-2zDeqUXJcppuroyGsDYuTq7xu4YfO4HVNN-ylbvktXW_vHHCXzVjI9PsaOFC3B"
+                                class="block px-3 py-2 hover:bg-gray-700 hover:text-green-400 font-normal text-white">Publications</a>
+                        </li>
+                        <li><a href="https://github.com/paarthparekh/"
+                                class="block px-3 py-2 hover:bg-gray-700 hover:text-green-400 font-normal text-white">Github</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="index.html#contact" class="hover:text-gray-700">Contact</a></li>
+                <li>
+                    <a class="custom-button fadedown-enter-done" style="transition-delay: 50ms;"
+                        href="assets/PaarthParekh_CV.pdf" download="PaarthParekh_CV.pdf">
+                        Resume
+                    </a>
+                </li>
+            </ul>
+            <!-- Mobile Navigation: Hamburger button visible on small screens -->
+            <div class="lg:hidden">
+                <button id="menuButton" class="text-gray-300 hover:text-white focus:outline-none">
+                    <!-- Hamburger Icon -->
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu" class="lg:hidden hidden">
+            <ul class="px-2 pt-2 pb-4 space-y-1 bg-gray-900">
+                <li>
+                    <a href="index.html#about"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html#experience"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">
+                        Experience
+                    </a>
+                </li>
+                <li>
+                    <a href="projects.html"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-white bg-gray-800">Projects</a>
+                    <ul class="pl-4 space-y-1">
+                        <li><a href="https://scholar.google.com/citations?hl=en&user=3jB9dxQAAAAJ&view_op=list_works&authuser=4&gmla=AGd7smEp8NrfQO90Rtmh2HMXa-2zDeqUXJcppuroyGsDYuTq7xu4YfO4HVNN-ylbvktXW_vHHCXzVjI9PsaOFC3B"
+                                class="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-700">Publications</a>
+                        </li>
+                        <li><a href="https://github.com/paarthparekh"
+                                class="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-700">Github</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="index.html#contact"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">
+                        Contact
+                    </a>
+                </li>
+                <li>
+                    <a href="assets/PaarthParekh_CV.pdf" download="PaarthParekh_CV.pdf" target="_blank"
+                        rel="noopener noreferrer"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">
+                        Resume
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Projects Header Section -->
+    <header id="projects-header"
+        class="relative h-[50vh] flex flex-col justify-center items-center text-center pt-20 overflow-hidden">
+        <!-- Particles Background -->
+        <div id="particles-js" class="absolute inset-0 z-0"></div>
+        <div class="relative z-10 pointer-events-none px-4">
+            <h1 class="text-6xl font-bold mb-4 fade-in">Projects</h1>
+            <p class="text-xl fade-in text-gray-400 max-w-2xl mx-auto">
+                A collection of my work in Software Development, Data Engineering, and Data Science.
+            </p>
+        </div>
+    </header>
+
+    <!-- Projects Grid Section -->
+    <section id="projects-grid" class="py-16 px-8 mx-auto max-w-6xl">
+        <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            <!-- Projects will be dynamically loaded here -->
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="py-6 text-center">
+        <div class="social-icons-mobile xl:hidden bottom-0 left-0 w-full flex justify-center space-x-6 p-3 bg-gray-900">
+            <!-- GitHub Icon -->
+            <a aria-label="Link to my Github" href="https://github.com/PaarthParekh" rel="noreferrer noopener"
+                target="_blank"><svg fill="none" viewBox="0 0 61 65" xmlns="http://www.w3.org/2000/svg"
+                    class="aspect-square size-12 rounded bg-black-primary p-2 text-white-primary duration-300 hover:text-[color:var(--highlight)] dark:bg-white-primary dark:text-black-primary">
+                    <path
+                        d="M60.258 23.833A17.781 17.781 0 0 0 56.3 12.715a17.932 17.932 0 0 0-.772-10.813 2.385 2.385 0 0 0-1.503-1.38c-.966-.33-4.621-.951-12.07 3.876a35.975 35.975 0 0 0-9.82-1.185c-3.317-.06-6.627.34-9.835 1.186C14.66-.54 10.686.26 9.886.495a2.414 2.414 0 0 0-1.504 1.407 17.93 17.93 0 0 0-.8 10.786 16.849 16.849 0 0 0-3.944 11.2c0 15.255 8.73 19.862 16.73 21.49a12.89 12.89 0 0 0-.84 3.13 1.336 1.336 0 0 0 0 .346v4.22c-7.283.607-8.841-3.655-8.993-4.138a3.208 3.208 0 0 0-.126-.331 12.207 12.207 0 0 0-6.896-6.138 2.414 2.414 0 1 0-1.53 4.58 7.295 7.295 0 0 1 3.917 3.35c.966 3.131 4.911 8.083 13.6 7.531v3.973a2.414 2.414 0 0 0 4.828 0V49.032a6.899 6.899 0 0 1 1.75-3.766A2.4 2.4 0 0 0 24.7 41.13c-8.414-.98-16.192-3.752-16.192-17.338h-.001a11.867 11.867 0 0 1 3.53-8.855 2.564 2.564 0 0 0 .553-2.565 11.955 11.955 0 0 1-.152-7.31 20.979 20.979 0 0 1 8.151 3.82 2.47 2.47 0 0 0 2.124.29 29.81 29.81 0 0 1 9.463-1.283c3.198-.084 6.388.35 9.448 1.283a2.457 2.457 0 0 0 2.124-.29 21.672 21.672 0 0 1 7.807-3.794 12.21 12.21 0 0 1-.18 7.38 2.388 2.388 0 0 0 .47 2.345 13.437 13.437 0 0 1 3.627 8.979c0 13.558-8.18 16.372-16.193 17.338a2.401 2.401 0 0 0-1.158 4.318c.855.648 1.848 2.468 1.848 5.516v10.924a2.413 2.413 0 1 0 4.827 0V50.964a14.707 14.707 0 0 0-1.034-5.614c6.482-1.378 16.496-5.64 16.496-21.517Z"
+                        fill="currentColor"></path>
+                </svg></a>
+            <!-- LinkedIn Icon -->
+            <a aria-label="Link to my LinkedIn" href="https://www.linkedin.com/in/parekhpaarth/"
+                rel="noreferrer noopener" target="_blank"><svg viewBox="0 0 448 448" xmlns="http://www.w3.org/2000/svg"
+                    class="aspect-square size-12 rounded bg-black-primary p-2 text-white-primary duration-300 hover:text-[color:var(--highlight)] dark:bg-white-primary dark:text-black-primary">
+                    <path
+                        d="M100.28 448H7.4V148.9h92.88V448ZM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3ZM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448h-.1Z"
+                        fill="currentColor"></path>
+                </svg></a>
+            <a aria-label="Link to my Resume" href="assets/PaarthParekh_CV.pdf" rel="noreferrer noopener"
+                target="_blank">
+                <div class="aspect-square size-12 rounded bg-black-primary p-2 text-white-primary 
+             duration-300 hover:text-[color:var(--highlight)] 
+             dark:bg-white-primary dark:text-black-primary
+             flex items-center justify-center">
+                    <img src="assets/icons/approved.png" alt="Resume Icon"
+                        class="max-w-full max-h-full object-contain" />
+                </div>
+            </a>
+        </div>
+        <p>&copy; 2025 Paarth Parekh. All rights reserved.</p>
+
+        <p class="text-sm text-gray-500 mt-2">Last Updated on Feb 07, 2026</p>
+
+    </footer>
+
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <!-- Toast Notification -->
+    <div id="copyToast" class="copy-toast">Email Copied!</div>
+
+    <script>
+        function copyEmail(e) {
+            e.preventDefault();
+            const email = "paarthparekh2824@gmail.com";
+            navigator.clipboard.writeText(email).then(() => {
+                const toast = document.getElementById("copyToast");
+                toast.classList.add("show");
+                setTimeout(() => {
+                    toast.classList.remove("show");
+                }, 3000);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuButton = document.getElementById("menuButton");
+            const mobileMenu = document.getElementById("mobileMenu");
+
+            menuButton.addEventListener("click", function () {
+                mobileMenu.classList.toggle("hidden");
+            });
+
+            // When a mobile menu link is clicked, close the mobile menu.
+            const mobileLinks = mobileMenu.querySelectorAll("a");
+            mobileLinks.forEach(link => {
+                link.addEventListener("click", function () {
+                    mobileMenu.classList.add("hidden");
+                });
+            });
+        });
+
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 60,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#64ffda"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 140,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+    <script src="assets/js/projects.js"></script>
+</body>
+
+</html>

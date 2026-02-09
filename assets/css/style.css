@@ -254,3 +254,61 @@
         animation: none;
       }
     }
+
+    /* Glassmorphism Navigation */
+    .glass-nav {
+      background: rgba(17, 24, 39, 0.75);
+      /* gray-900 with opacity */
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Scroll Down / About Me Button in Hero */
+    .cta-button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.75rem 2rem;
+      border: 1px solid #64ffda;
+      border-radius: 4px;
+      color: #64ffda;
+      background-color: transparent;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      z-index: 20;
+      /* Ensure it's above particles */
+      position: relative;
+    }
+
+    .cta-button:hover {
+      background-color: rgba(100, 255, 218, 0.1);
+      transform: translateY(-3px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Copy Email Toast Notification */
+    .copy-toast {
+      visibility: hidden;
+      min-width: 120px;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      border-radius: 4px;
+      padding: 8px;
+      position: fixed;
+      z-index: 100;
+      bottom: 30px;
+      right: 30px;
+      /* Position near the email sidebar */
+      font-size: 14px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .copy-toast.show {
+      visibility: visible;
+      opacity: 1;
+    }

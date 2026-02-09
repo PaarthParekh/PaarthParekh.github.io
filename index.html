@@ -40,8 +40,8 @@
     </a>
   </div>
   <!--Email Address-->
-  <div class="fixed right-0 hidden xl:flex bottom-4 flex flex-col items-center pr-4 space-y-4">
-    <a href="mailto:paarthparekh2824@gmail.com" class="text-sm text-white-400 hover:text-green-400"
+  <div class="fixed right-0 hidden xl:flex bottom-4 flex flex-col items-center pr-4 space-y-4 z-50">
+    <a href="#" onclick="copyEmail(event)" class="text-sm text-white-400 hover:text-green-400"
       style="writing-mode: vertical-rl; text-orientation: mixed;">
       paarthparekh2824@gmail.com
     </a>
@@ -49,18 +49,19 @@
     <div class="h-20 border-l border-gray-400"></div>
   </div>
   <!-- Navigation -->
-  <nav class="fixed top-0 w-full bg-gray-900 z-50 shadow-md pt-4">
+  <nav class="fixed top-0 w-full glass-nav z-50 shadow-md pt-4">
     <div class="flex justify-between items-center py-3 px-5">
-      <a href="#home" class="text-2xl font-bold hover:text-gray-300">
+      <a href="index.html" class="text-2xl font-bold hover:text-gray-300">
         Paarth Parekh
       </a>
       <ul class="hidden lg:flex space-x-12 text-lg items-center">
         <li><a href="#about" class="hover:text-gray-700">About</a></li>
         <li><a href="#experience" class="hover:text-gray-700">Experience</a></li>
         <li class="relative group">
-          <a class="hover:text-gray-700">Projects</a>
+          <a href="projects.html" class="hover:text-gray-700">Projects</a>
           <!-- Dropdown submenu (desktop) -->
           <ul class="dropdown">
+            <li><a href="projects.html" class="block px-3 py-2 hover:bg-gray-700 hover:text-green-400">Projects</a></li>
             <li><a
                 href="https://scholar.google.com/citations?hl=en&user=3jB9dxQAAAAJ&view_op=list_works&authuser=4&gmla=AGd7smEp8NrfQO90Rtmh2HMXa-2zDeqUXJcppuroyGsDYuTq7xu4YfO4HVNN-ylbvktXW_vHHCXzVjI9PsaOFC3B"
                 class="block px-3 py-2 hover:bg-gray-700 hover:text-green-400">Publications</a></li>
@@ -72,7 +73,7 @@
         <li>
           <a class="custom-button fadedown-enter-done" style="transition-delay: 50ms;" href="assets/PaarthParekh_CV.pdf"
             download="PaarthParekh_CV.pdf">
-            Curriculum vitae
+            Resume
           </a>
         </li>
       </ul>
@@ -101,7 +102,7 @@
           </a>
         </li>
         <li>
-          <a href="https://scholar.google.com/citations?hl=en&user=3jB9dxQAAAAJ&view_op=list_works&authuser=4&gmla=AGd7smEp8NrfQO90Rtmh2HMXa-2zDeqUXJcppuroyGsDYuTq7xu4YfO4HVNN-ylbvktXW_vHHCXzVjI9PsaOFC3B"
+          <a href="projects.html"
             class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Projects</a>
           <ul class="pl-4 space-y-1">
             <li><a
@@ -120,7 +121,7 @@
         <li>
           <a href="assets/PaarthParekh_CV.pdf" download="PaarthParekh_CV.pdf" target="_blank" rel="noopener noreferrer"
             class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">
-            CV
+            Resume
           </a>
         </li>
       </ul>
@@ -136,6 +137,7 @@
       <h1 class="text-6xl font-bold mb-4 fade-in">Hello, I'm Paarth</h1>
       <p class="text-2xl typewriter">Technical Implementation Consultant driving financial software solutions and
         complex system integrations.</p>
+      <a href="#about" class="cta-button fade-in pointer-events-auto">About Me</a>
     </div>
   </header>
 
@@ -410,8 +412,25 @@
 
   </footer>
 
+  <!-- Toast Notification -->
+  <div id="copyToast" class="copy-toast">Email Copied!</div>
+
   <!-- JavaScript to handle tab switching for Experience -->
   <script>
+    function copyEmail(e) {
+      e.preventDefault();
+      const email = "paarthparekh2824@gmail.com";
+      navigator.clipboard.writeText(email).then(() => {
+        const toast = document.getElementById("copyToast");
+        toast.classList.add("show");
+        setTimeout(() => {
+          toast.classList.remove("show");
+        }, 3000);
+      }).catch(err => {
+        console.error('Failed to copy: ', err);
+      });
+    }
+
     document.addEventListener('DOMContentLoaded', function () {
       const tabs = document.querySelectorAll('#job-tabs li');
       const jobDetails = document.querySelectorAll('.job-detail');
