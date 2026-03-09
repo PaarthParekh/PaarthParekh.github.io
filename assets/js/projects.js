@@ -6,6 +6,14 @@ const projects = [
         links: []
     },
     {
+        title: "Trade Settlement Kafka",
+        description: "Engineered a Java-based messaging pipeline simulating a trading OMS and Kafka consumer. Implemented an event-driven architecture that captures trade data, serializes it into XML via JAXB, and routes it through an Apache Kafka broker for real-time settlement processing.",
+        tags: ["Java", "Apache Kafka", "JAXB", "Docker", "Event-Driven Architecture"],
+        links: [
+            { type: "github", url: "https://github.com/PaarthParekh/Trade_Settlement_Kafka" }
+        ]
+    },
+    {
         title: "Credit Card Churn Prediction",
         description: "Engineered predictive models to analyze customer churn risk factors and KPIs. Utilized Python and Seaborn to visualize attrition drivers, providing actionable insights for retention strategies in consumer finance.",
         tags: ["Python", "Data Visualization", "Risk Analytics", "Pandas"],
