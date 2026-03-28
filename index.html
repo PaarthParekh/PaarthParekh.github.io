@@ -1,567 +1,559 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html class="dark scroll-smooth" lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Paarth Parekh - Portfolio</title>
-  <!-- Include Tailwind CSS from CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Optional: Your own stylesheet can be linked here -->
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-
-<body class="bg-gray-900 text-white">
-  <!-- Social Icons Sidebar -->
-  <div class="social-icons hidden xl:flex items-center space-x-4">
-    <!-- GitHub Icon -->
-    <a aria-label="Link to my Github" href="https://github.com/PaarthParekh" rel="noreferrer noopener"
-      target="_blank"><svg fill="none" viewBox="0 0 61 65" xmlns="http://www.w3.org/2000/svg"
-        class="aspect-square size-12 rounded bg-black-primary p-2 text-white-primary duration-300 hover:text-[color:var(--highlight)] dark:bg-white-primary dark:text-black-primary">
-        <path
-          d="M60.258 23.833A17.781 17.781 0 0 0 56.3 12.715a17.932 17.932 0 0 0-.772-10.813 2.385 2.385 0 0 0-1.503-1.38c-.966-.33-4.621-.951-12.07 3.876a35.975 35.975 0 0 0-9.82-1.185c-3.317-.06-6.627.34-9.835 1.186C14.66-.54 10.686.26 9.886.495a2.414 2.414 0 0 0-1.504 1.407 17.93 17.93 0 0 0-.8 10.786 16.849 16.849 0 0 0-3.944 11.2c0 15.255 8.73 19.862 16.73 21.49a12.89 12.89 0 0 0-.84 3.13 1.336 1.336 0 0 0 0 .346v4.22c-7.283.607-8.841-3.655-8.993-4.138a3.208 3.208 0 0 0-.126-.331 12.207 12.207 0 0 0-6.896-6.138 2.414 2.414 0 1 0-1.53 4.58 7.295 7.295 0 0 1 3.917 3.35c.966 3.131 4.911 8.083 13.6 7.531v3.973a2.414 2.414 0 0 0 4.828 0V49.032a6.899 6.899 0 0 1 1.75-3.766A2.4 2.4 0 0 0 24.7 41.13c-8.414-.98-16.192-3.752-16.192-17.338h-.001a11.867 11.867 0 0 1 3.53-8.855 2.564 2.564 0 0 0 .553-2.565 11.955 11.955 0 0 1-.152-7.31 20.979 20.979 0 0 1 8.151 3.82 2.47 2.47 0 0 0 2.124.29 29.81 29.81 0 0 1 9.463-1.283c3.198-.084 6.388.35 9.448 1.283a2.457 2.457 0 0 0 2.124-.29 21.672 21.672 0 0 1 7.807-3.794 12.21 12.21 0 0 1-.18 7.38 2.388 2.388 0 0 0 .47 2.345 13.437 13.437 0 0 1 3.627 8.979c0 13.558-8.18 16.372-16.193 17.338a2.401 2.401 0 0 0-1.158 4.318c.855.648 1.848 2.468 1.848 5.516v10.924a2.413 2.413 0 1 0 4.827 0V50.964a14.707 14.707 0 0 0-1.034-5.614c6.482-1.378 16.496-5.64 16.496-21.517Z"
-          fill="currentColor"></path>
-      </svg></a>
-    <!-- LinkedIn Icon -->
-    <a aria-label="Link to my LinkedIn" href="https://www.linkedin.com/in/parekhpaarth/" rel="noreferrer noopener"
-      target="_blank"><svg viewBox="0 0 448 448" xmlns="http://www.w3.org/2000/svg"
-        class="aspect-square size-12 rounded bg-black-primary p-2 text-white-primary duration-300 hover:text-[color:var(--highlight)] dark:bg-white-primary dark:text-black-primary">
-        <path
-          d="M100.28 448H7.4V148.9h92.88V448ZM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3ZM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448h-.1Z"
-          fill="currentColor"></path>
-      </svg></a>
-    <a aria-label="Link to my Resume" href="assets/Resume_PaarthParekh.pdf" rel="noreferrer noopener" target="_blank">
-      <div class="aspect-square size-12 rounded bg-black-primary p-2 text-white-primary 
-             duration-300 hover:text-[color:var(--highlight)] 
-             dark:bg-white-primary dark:text-black-primary
-             flex items-center justify-center">
-        <img src="assets/icons/resume.png" alt="Resume Icon" class="max-w-full max-h-full object-contain" />
-      </div>
-    </a>
-  </div>
-  <!--Email Address-->
-  <div class="fixed right-0 hidden xl:flex bottom-4 flex flex-col items-center pr-4 space-y-4 z-50">
-    <a href="#" onclick="copyEmail(event)" class="text-sm text-white-400 hover:text-green-400"
-      style="writing-mode: vertical-rl; text-orientation: mixed;">
-      paarthparekh2824@gmail.com
-    </a>
-    <!-- Vertical Line -->
-    <div class="h-20 border-l border-gray-400"></div>
-  </div>
-  <!-- Navigation -->
-  <nav class="fixed top-0 w-full glass-nav z-50 shadow-md pt-4">
-    <div class="flex justify-between items-center py-3 px-5">
-      <a href="index.html" class="text-2xl font-bold hover:text-gray-300">
-        Paarth Parekh
-      </a>
-      <ul class="hidden lg:flex space-x-12 text-lg items-center">
-        <li><a href="#about" class="hover:text-gray-700">About</a></li>
-        <li><a href="#experience" class="hover:text-gray-700">Experience</a></li>
-
-        <li><a href="#contact" class="hover:text-gray-700">Contact</a></li>
-        <li class="relative group">
-          <a href="projects.html" class="hover:text-gray-700">Projects</a>
-          <!-- Dropdown submenu (desktop) -->
-          <ul class="dropdown">
-            <li><a href="projects.html"
-                class="block px-3 py-2 hover:bg-gray-700 hover:text-green-400 font-normal text-white">Selected Work</a></li>
-            <li><a href="https://github.com/paarthparekh/"
-                class="block px-3 py-2 hover:bg-gray-700 hover:text-green-400 font-normal text-white">Github</a></li>
-            <li><a
-                href="https://scholar.google.com/citations?hl=en&user=3jB9dxQAAAAJ&view_op=list_works&authuser=4&gmla=AGd7smEp8NrfQO90Rtmh2HMXa-2zDeqUXJcppuroyGsDYuTq7xu4YfO4HVNN-ylbvktXW_vHHCXzVjI9PsaOFC3B"
-                class="block px-3 py-2 hover:bg-gray-700 hover:text-green-400 font-normal text-white">Publications</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a class="custom-button fadedown-enter-done" style="transition-delay: 50ms;"
-            href="assets/Resume_PaarthParekh.pdf" download="Resume_PaarthParekh.pdf">
-            Resume
-          </a>
-        </li>
-      </ul>
-      <!-- Mobile Navigation: Hamburger button visible on small screens -->
-      <div class="lg:hidden">
-        <button id="menuButton" class="text-gray-300 hover:text-white focus:outline-none">
-          <!-- Hamburger Icon -->
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
-      </div>
-    </div>
-    <div id="mobileMenu" class="lg:hidden hidden">
-      <ul class="px-2 pt-2 pb-4 space-y-1 bg-gray-900">
-        <li>
-          <a href="#about"
-            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">
-            About
-          </a>
-        </li>
-        <li>
-          <a href="#experience"
-            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">
-            Experience
-          </a>
-        </li>
-
-        <li>
-          <a href="#contact"
-            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">
-            Contact
-          </a>
-        </li>
-        <li>
-          <a href="projects.html"
-            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">Selected Work</a>
-          <ul class="pl-4 space-y-1">
-            <li><a href="https://github.com/paarthparekh"
-                class="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-700">Github</a></li>
-            <li><a
-                href="https://scholar.google.com/citations?hl=en&user=3jB9dxQAAAAJ&view_op=list_works&authuser=4&gmla=AGd7smEp8NrfQO90Rtmh2HMXa-2zDeqUXJcppuroyGsDYuTq7xu4YfO4HVNN-ylbvktXW_vHHCXzVjI9PsaOFC3B"
-                class="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-700">Publications</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="assets/Resume_PaarthParekh.pdf" download="Resume_PaarthParekh.pdf" target="_blank"
-            rel="noopener noreferrer"
-            class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700">
-            Resume
-          </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- Home Section -->
-  <header id="home"
-    class="relative h-screen flex flex-col justify-center items-center text-center pt-20 overflow-hidden">
-    <!-- Particles Background -->
-    <div id="particles-js" class="absolute inset-0 z-0"></div>
-    <div class="relative z-10 pointer-events-none">
-      <h1 class="text-6xl font-bold mb-4 fade-in">Hello, I'm Paarth</h1>
-      <p class="text-2xl typewriter">Technical Implementation Consultant specializing in enterprise software delivery, data integrations, and SaaS migrations.</p>
-      <a href="#about" class="cta-button fade-in pointer-events-auto">About Me</a>
-    </div>
-  </header>
-
-  <!-- About Section -->
-  <section id="about" class="min-h-screen py-24 px-8 mx-auto max-w-6xl">
-    <div class="px-6">
-      <h2 class="text-4xl font-bold flex items-center space-x-6 mb-8">
-        <span class="text-gray-200">About Me</span>
-        <span class="w-32 h-[2px] bg-gray-600 hidden md:inline-block"></span>
-      </h2>
-      <div class="flex flex-col md:flex-row items-start mt-12 md:ml-12">
-        <!-- Text Column -->
-        <div class="md:w-3/5 pr-12 fade-in">
-          <p class="text-lg leading-relaxed mb-4 text-gray-400">
-           I’m a Technical Implementation Consultant with 5+ years of experience leading solution design, client delivery, and technical execution for complex software platforms. I specialize in translating business requirements into scalable workflows, integration strategies, and implementation roadmaps that drive successful platform adoption.
-          </p>
-          <p class="text-lg leading-relaxed mb-4 text-gray-400">
-           Currently, I work at <a href="https://www.crd.com/" target="_blank"
-              class="text-green-400">Charles River Development</a>,where I work with institutional clients to design and deliver enterprise software solutions across workflow configuration, data integration, and SaaS transformation initiatives
-          </p>
-          <p class="text-lg leading-relaxed mb-4 text-gray-400">
-            Prior to Fintech, I spent four years at a startup wearing multiple hats where I partnered across product, engineering, and client teams to shape analytics platforms, onboarding strategies, and scalable data workflows.
-          </p>
-
-          <p class="text-lg leading-relaxed mb-4 text-gray-400">
-            My strengths are in implementation delivery, stakeholder communication, technical problem solving, data integration, and helping clients turn complex systems into practical solutions.
-          </p>
-          <p class="text-lg leading-relaxed mt-6 text-gray-400">
-            Here are a few areas I’ve been working on recently:
-          </p>
-          <ul class="custom-bullet text-gray-400">
-            <li>Technical Implementation & Client Delivery</li>
-            <li>SaaS Migration & Workflow Design</li>
-            <li>Data Integration & ETL</li>
-            <li>Python, SQL, AWS</li>
-            <li>Stakeholder Management</li>
-          </ul>
-        </div>
-        <!-- Image Column -->
-        <div class="md:w-2/5 mt-8 md:mt-0 fade-in relative flex justify-center md:justify-end">
-          <div class="relative w-[300px] h-[300px] md:w-[450px] md:h-[450px] flex items-center">
-            <!-- Image Outline Box (Behind) -->
-            <div
-              class="absolute top-4 left-4 w-full h-full border-2 border-green-400 opacity-50 transform md:translate-x-[12px] md:translate-y-[12px]">
-            </div>
-
-            <!-- Square Profile Image -->
-            <img src="assets/IMG_7643.jpg" alt="Profile Picture"
-              class="w-full h-full object-cover shadow-lg transform md:translate-x-[15px] md:translate-y-[15px] transition-all duration-300" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="experience" class="py-32 px-8 mx-auto max-w-6xl">
-    <div class="px-6">
-      <h2 class="text-4xl font-bold flex items-center space-x-6 mb-8">
-        <span class="text-gray-200">Experience</span>
-        <span class="w-32 h-[2px] bg-gray-600 hidden md:inline-block self-center"></span>
-      </h2>
-      <div class="flex flex-col md:flex-row items-start">
-        <!-- Tabs Container -->
-        <!-- On mobile: full width without left border; on desktop: 1/4 width with left border -->
-        <div id="job-tabs-container" class="w-full md:w-1/4 md:border-l md:border-gray-700">
-          <!-- Job Tabs List: horizontally arranged on mobile, vertically on desktop -->
-          <ul id="job-tabs" class="flex flex-row md:flex-col p-4 space-x-2 md:space-x-0 md:space-y-2">
-            <li class="text-lg cursor-pointer p-2 md:p-4 active text-green-600 fade-in" data-job="job0">
-              Charles River Development
-            </li>
-            <li class="text-lg cursor-pointer p-2 md:p-4 fade-in" data-job="job1">
-              Javelin
-            </li>
-            <li class="text-lg cursor-pointer p-2 md:p-4 fade-in" data-job="job2">
-              GSK
-            </li>
-            <li class="text-lg cursor-pointer p-2 md:p-4 fade-in" data-job="job3">
-              Zhang Lab
-            </li>
-            <li class="text-lg cursor-pointer p-2 md:p-4 fade-in" data-job="job4">
-              Storici Lab
-            </li>
-          </ul>
-        </div>
-
-
-        <!-- Job Details -->
-        <div id="job-content" class="w-full md:w-3/4 p-4">
-          <!-- Job 0: Charles River Development -->
-          <div id="job0" class="job-detail fade-in">
-            <h3 class="text-xl font-semibold">Technical Implementation Consultant <a href="https://www.crd.com/"
-                target="_blank" class="text-green-400">@ Charles River Development</a></h3>
-            <div class="text-md text-gray-400">
-              <span>Client Delivery & Implementation</span>
-            </div>
-            <div class="text-sm text-gray-400 mb-2">
-              <span>Aug 2025 - Present</span> | <span>Massachusetts, USA</span>
-            </div>
-            <ul class="custom-bullet2">
-              <li>Lead solution design and technical delivery for institutional clients implementing enterprise investment management platforms within the State Street Alpha ecosystem.</li>
-              <li>Drive discovery sessions with client stakeholders to translate business requirements into workflow designs, integration strategies, and scalable implementation plans.</li>
-              <li>Design target-state solutions across data onboarding, platform workflows, and system integrations to support successful deployments and SaaS migrations.</li>
-              <li>Partner with product, engineering, operations, and client teams to resolve complex issues, refine solution fit, and support post-go-live stabilization.</li>
-            </ul>
-          </div>
-          <!-- Job 1 -->
-          <div id="job1" class="job-detail hidden fade-in">
-            <h3 class="text-xl font-semibold">Computer and Solutions Engineer II <a href="https://javelinbiotech.com/"
-                target="_blank" class="text-green-400">@Javelin</a></h3>
-            <div class="text-md text-gray-400">
-              <span>Client Implementation, Product Delivery and Product Owner</span>
-            </div>
-            <div class="text-sm text-gray-400 mb-2">
-              <span>June 2021 - July 2025</span> | <span>Woburn, MA</span>
-            </div>
-            <ul class="custom-bullet2">
-              <li>Led solution design and onboarding strategy for a predictive analytics platform, serving as the primary bridge between external stakeholders and internal technical teams.</li>
-              <li>Partnered with engineers to support scalable data workflows and production-ready analytics solutions.</li>
-              <li>Helped structure complex experimental data into usable SQL/NoSQL environments for dashboards, analysis, and modeling.</li>
-              <li>Translated evolving client and business needs into execution plans that improved implementation efficiency and accelerated time-to-value.</li>
-            </ul>
-          </div>
-          <!-- Job 2 -->
-          <div id="job2" class="job-detail hidden fade-in">
-            <h3 class="text-xl font-semibold"> Intern <a href="https://www.gsk.com/en-gb/" target="_blank"
-                class="text-green-400">@ GSK</a></h3>
-            <div class="text-md text-gray-400">
-              <span>Data Analysis, Scripting, and Modeling</span>
-            </div>
-            <div class="text-sm text-gray-400 mb-2">
-              <span>June 2020 - December 2020</span> | <span>Rockville, Maryland</span>
-            </div>
-            <p class="mt-4">
-            <ul class="custom-bullet2 text-lg">
-              <li>Developed automated analysis scripts and ETL pipelines in Python to
-                process high-dimensional datasets, replacing manual workflows and increasing data throughput.</li>
-              <li>Built and validated statistical models to simulate complex
-                system behaviors, directly supporting critical decision-making for research operations.</li>
-              <li>Optimized data ingestion workflows and maintained
-                version-controlled codebases (Git) to ensure data integrity across cross-functional teams.</li>
-              <li>Created technical visualizations and reports that simplified complex
-                data trends for non-technical audiences and executive leadership.</li>
-            </ul>
-            </p>
-          </div>
-          <div id="job3" class="job-detail hidden fade-in">
-            <h3 class="text-xl font-semibold">Graduate Research Assistant <a href="https://xiuweizhang.wordpress.com/"
-                target="_blank" class="text-green-400">@ Zhang Lab</a></h3>
-            <div class="text-sm text-gray-400 mb-2">
-              <span>Jan 2021 - May 2021</span> | <span>Atlanta, GA</span>
-            </div>
-            <ul class="custom-bullet2 text-lg">
-              <li>Evaluated multiple computational tools for velocity analysis
-                and network inference, identifying trade-offs in computational speed, sensitivity, and accuracy.</li>
-              <li>Built an end-to-end data processing pipeline integrating
-                quality control, normalization, and advanced analytics, reducing processing time while enhancing data
-                consistency.</li>
-            </ul>
-          </div>
-          <div id="job4" class="job-detail hidden fade-in">
-            <h3 class="text-xl font-semibold">Graduate Research Assistant <a href="https://storicilab.gatech.edu/"
-                target="_blank" class="text-green-400">@ Storici Lab</a></h3>
-            <div class="text-sm text-gray-400 mb-2">
-              <span>August 2019 - May 2020</span> | <span>Atlanta, GA</span>
-            </div>
-            <ul class="custom-bullet2 text-lg">
-              <li>Developed and optimized an ETL pipeline to transform raw
-                sequencing data into structured formats, enabling comprehensive downstream analysis.</li>
-              <li>Built a predictive model leveraging
-                transformed datasets to forecast complex replication events, providing novel insights into system
-                behaviors.</li>
-              <li>Collaborated with domain experts to validate computational findings,
-                bridging in silico predictions with experimental results for enhanced reproducibility.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="py-32 scroll-mt-20">
-    <div class="max-w-5xl mx-auto px-6 text-center space-y-6">
-      <h2 class="text-4xl font-bold fade-in">Get In Touch</h2>
-      <!-- Added md:gap-x-12 to increase horizontal spacing on desktop -->
-      <div class="flex flex-col md:flex-row items-center md:justify-between mt-12 space-y-4 md:space-y-0 md:gap-x-12">
-        <!-- Contact Me Section -->
-        <div class="md:w-1/2 text-center">
-          <p class="text-lg fade-in">
-            I’m open to opportunities in technical implementation, solutions consulting, and data platform delivery. Feel free to reach out via email or LinkedIn.
-          </p>
-          <a class="custom-button fadedown-enter-done inline-block mt-4 mx-auto" style="transition-delay: 50ms;"
-            href="mailto:paarthparekh2824@gmail.com" rel="noopener noreferrer">
-            Say Hello
-          </a>
-        </div>
-        <!-- Location Section -->
-        <div class="md:w-1/2 text-center">
-          <p class="text-lg fade-in mt-4 text-left">
-            Current Location:
-          </p>
-          <!-- Embedded Google Map for Boston -->
-          <div class="mt-4">
-            <iframe src="https://maps.google.com/maps?q=Boston,MA,USA&t=&z=12&ie=UTF8&iwloc=&output=embed" width="100%"
-              height="250" style="border:0;" allowfullscreen="">
-            </iframe>
-          </div>
-          <p class="text-lg fade-in mt-4">
-            Boston, Massachusetts, USA
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Footer -->
-  <footer class="py-6 text-center">
-    <div class="social-icons-mobile xl:hidden bottom-0 left-0 w-full flex justify-center space-x-6 p-3 bg-gray-900">
-      <!-- GitHub Icon -->
-      <a aria-label="Link to my Github" href="https://github.com/PaarthParekh" rel="noreferrer noopener"
-        target="_blank"><svg fill="none" viewBox="0 0 61 65" xmlns="http://www.w3.org/2000/svg"
-          class="aspect-square size-12 rounded bg-black-primary p-2 text-white-primary duration-300 hover:text-[color:var(--highlight)] dark:bg-white-primary dark:text-black-primary">
-          <path
-            d="M60.258 23.833A17.781 17.781 0 0 0 56.3 12.715a17.932 17.932 0 0 0-.772-10.813 2.385 2.385 0 0 0-1.503-1.38c-.966-.33-4.621-.951-12.07 3.876a35.975 35.975 0 0 0-9.82-1.185c-3.317-.06-6.627.34-9.835 1.186C14.66-.54 10.686.26 9.886.495a2.414 2.414 0 0 0-1.504 1.407 17.93 17.93 0 0 0-.8 10.786 16.849 16.849 0 0 0-3.944 11.2c0 15.255 8.73 19.862 16.73 21.49a12.89 12.89 0 0 0-.84 3.13 1.336 1.336 0 0 0 0 .346v4.22c-7.283.607-8.841-3.655-8.993-4.138a3.208 3.208 0 0 0-.126-.331 12.207 12.207 0 0 0-6.896-6.138 2.414 2.414 0 1 0-1.53 4.58 7.295 7.295 0 0 1 3.917 3.35c.966 3.131 4.911 8.083 13.6 7.531v3.973a2.414 2.414 0 0 0 4.828 0V49.032a6.899 6.899 0 0 1 1.75-3.766A2.4 2.4 0 0 0 24.7 41.13c-8.414-.98-16.192-3.752-16.192-17.338h-.001a11.867 11.867 0 0 1 3.53-8.855 2.564 2.564 0 0 0 .553-2.565 11.955 11.955 0 0 1-.152-7.31 20.979 20.979 0 0 1 8.151 3.82 2.47 2.47 0 0 0 2.124.29 29.81 29.81 0 0 1 9.463-1.283c3.198-.084 6.388.35 9.448 1.283a2.457 2.457 0 0 0 2.124-.29 21.672 21.672 0 0 1 7.807-3.794 12.21 12.21 0 0 1-.18 7.38 2.388 2.388 0 0 0 .47 2.345 13.437 13.437 0 0 1 3.627 8.979c0 13.558-8.18 16.372-16.193 17.338a2.401 2.401 0 0 0-1.158 4.318c.855.648 1.848 2.468 1.848 5.516v10.924a2.413 2.413 0 1 0 4.827 0V50.964a14.707 14.707 0 0 0-1.034-5.614c6.482-1.378 16.496-5.64 16.496-21.517Z"
-            fill="currentColor"></path>
-        </svg></a>
-      <!-- LinkedIn Icon -->
-      <a aria-label="Link to my LinkedIn" href="https://www.linkedin.com/in/parekhpaarth/" rel="noreferrer noopener"
-        target="_blank"><svg viewBox="0 0 448 448" xmlns="http://www.w3.org/2000/svg"
-          class="aspect-square size-12 rounded bg-black-primary p-2 text-white-primary duration-300 hover:text-[color:var(--highlight)] dark:bg-white-primary dark:text-black-primary">
-          <path
-            d="M100.28 448H7.4V148.9h92.88V448ZM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3ZM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448h-.1Z"
-            fill="currentColor"></path>
-        </svg></a>
-      <a aria-label="Link to my Resume" href="assets/Resume_PaarthParekh.pdf" rel="noreferrer noopener" target="_blank">
-        <div class="aspect-square size-12 rounded bg-black-primary p-2 text-white-primary 
-             duration-300 hover:text-[color:var(--highlight)] 
-             dark:bg-white-primary dark:text-black-primary
-             flex items-center justify-center">
-          <img src="assets/icons/resume.png" alt="Resume Icon" class="max-w-full max-h-full object-contain" />
-        </div>
-      </a>
-    </div>
-    <div class="social-icons-mobile xl:hidden bottom-0 left-0 w-full flex justify-center space-x-6 p-3 bg-gray-900">
-      <a href="mailto:paarthparekh2824@gmail.com" class="text-md text-white-400 hover:text-green-400">
-        paarthparekh2824@gmail.com
-      </a>
-    </div>
-    <p>&copy; 2025 Paarth Parekh. All rights reserved.</p>
-
-    <p class="text-sm text-gray-500 mt-2">Last Updated on March 07, 2026</p>
-
-  </footer>
-
-  <!-- Toast Notification -->
-  <div id="copyToast" class="copy-toast">Email Copied!</div>
-
-  <!-- JavaScript to handle tab switching for Experience -->
-  <script>
-    function copyEmail(e) {
-      e.preventDefault();
-      const email = "paarthparekh2824@gmail.com";
-      navigator.clipboard.writeText(email).then(() => {
-        const toast = document.getElementById("copyToast");
-        toast.classList.add("show");
-        setTimeout(() => {
-          toast.classList.remove("show");
-        }, 3000);
-      }).catch(err => {
-        console.error('Failed to copy: ', err);
-      });
-    }
-
-    document.addEventListener('DOMContentLoaded', function () {
-      const tabs = document.querySelectorAll('#job-tabs li');
-      const jobDetails = document.querySelectorAll('.job-detail');
-      const menuButton = document.getElementById("menuButton");
-      const mobileMenu = document.getElementById("mobileMenu");
-
-      menuButton.addEventListener("click", function () {
-        mobileMenu.classList.toggle("hidden");
-      });
-
-      // When a mobile menu link is clicked, close the mobile menu.
-      const mobileLinks = mobileMenu.querySelectorAll("a");
-      mobileLinks.forEach(link => {
-        link.addEventListener("click", function () {
-          mobileMenu.classList.add("hidden");
-        });
-      });
-
-      tabs.forEach(tab => {
-        tab.addEventListener('click', function () {
-          // Remove 'active' class from all tabs
-          tabs.forEach(t => t.classList.remove('active'));
-          tabs.forEach(t => t.classList.remove('text-green-600'));
-          // Hide all job details
-          jobDetails.forEach(detail => detail.classList.add('hidden'));
-
-          // Get the target job id from the data attribute
-          const jobId = tab.getAttribute('data-job');
-          document.getElementById(jobId).classList.remove('hidden');
-
-
-          // Mark the clicked tab as active and change color to green
-          tab.classList.add('active');
-          tab.classList.add('text-green-600');
-        });
-      });
-    });
-  </script>
-  <!-- Particles.js -->
-  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-  <script>
-    particlesJS("particles-js", {
-      "particles": {
-        "number": {
-          "value": 80,
-          "density": {
-            "enable": true,
-            "value_area": 800
-          }
-        },
-        "color": {
-          "value": "#64ffda"
-        },
-        "shape": {
-          "type": "circle",
-          "stroke": {
-            "width": 0,
-            "color": "#000000"
-          },
-          "polygon": {
-            "nb_sides": 5
-          }
-        },
-        "opacity": {
-          "value": 0.5,
-          "random": false,
-          "anim": {
-            "enable": false,
-            "speed": 1,
-            "opacity_min": 0.1,
-            "sync": false
-          }
-        },
-        "size": {
-          "value": 3,
-          "random": true,
-          "anim": {
-            "enable": false,
-            "speed": 40,
-            "size_min": 0.1,
-            "sync": false
-          }
-        },
-        "line_linked": {
-          "enable": true,
-          "distance": 150,
-          "color": "#ffffff",
-          "opacity": 0.4,
-          "width": 1
-        },
-        "move": {
-          "enable": true,
-          "speed": 6,
-          "direction": "none",
-          "random": false,
-          "straight": false,
-          "out_mode": "out",
-          "bounce": false,
-          "attract": {
-            "enable": false,
-            "rotateX": 600,
-            "rotateY": 1200
-          }
-        }
-      },
-      "interactivity": {
-        "detect_on": "canvas",
-        "events": {
-          "onhover": {
-            "enable": true,
-            "mode": "grab"
-          },
-          "onclick": {
-            "enable": true,
-            "mode": "push"
-          },
-          "resize": true
-        },
-        "modes": {
-          "grab": {
-            "distance": 140,
-            "line_linked": {
-              "opacity": 1
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Paarth Parekh | Solutions Architect | Solutions, Data & Platform Delivery</title>
+    
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        surface: "#0a0a0a",
+                        "surface-elevated": "#141414",
+                        "surface-card": "#1c1c1c",
+                        bronze: {
+                            300: "#d4b895",
+                            400: "#c29d71",
+                            500: "#b0834d",
+                            600: "#8c6538", 
+                            700: "#6b4c29",
+                            800: "#4a331a",
+                            900: "#2b1c0d",
+                        }
+                    },
+                    fontFamily: {
+                        headline: ["Manrope", "sans-serif"],
+                        body: ["Inter", "sans-serif"],
+                        label: ["Inter", "sans-serif"]
+                    }
+                }
             }
-          },
-          "bubble": {
-            "distance": 400,
-            "size": 40,
-            "duration": 2,
-            "opacity": 8,
-            "speed": 3
-          },
-          "repulse": {
-            "distance": 200,
-            "duration": 0.4
-          },
-          "push": {
-            "particles_nb": 4
-          },
-          "remove": {
-            "particles_nb": 2
-          }
         }
-      },
-      "retina_detect": true
-    });
-  </script>
-</body>
+    </script>
+    <style>
+        body { background-color: #0a0a0a; color: #f3f4f6; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; vertical-align: middle; }
+        
+        .noise-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.005; 
+        }
 
+        .glass-nav {
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .tab-content { display: none; opacity: 0; transition: opacity 0.4s ease; }
+        .tab-content.active { display: block; opacity: 1; }
+        
+        .copy-toast {
+            position: fixed; bottom: -100px; left: 50%; transform: translateX(-50%);
+            background: #8c6538; color: white; padding: 12px 24px; border-radius: 8px;
+            font-weight: 600; font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease; z-index: 100;
+            opacity: 0;
+            pointer-events: none;
+        }
+        .copy-toast.show { 
+            bottom: 30px; 
+            opacity: 1; 
+        }
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="font-body antialiased selection:bg-bronze-900 selection:text-bronze-300">
+    <div class="noise-overlay"></div>
+
+    <nav class="fixed top-0 w-full glass-nav z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="font-headline text-xl font-bold tracking-tight text-white hover:text-bronze-400 transition-colors">
+                Paarth Parekh
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="text-sm font-label font-medium text-gray-400 hover:text-white tracking-wide transition-colors">About</a>
+                <a href="#experience" class="text-sm font-label font-medium text-gray-400 hover:text-white tracking-wide transition-colors">Experience</a>
+                <a href="#selected-work" class="text-sm font-label font-medium text-gray-400 hover:text-white tracking-wide transition-colors">Selected Work</a>
+                <a href="#contact" class="text-sm font-label font-medium text-gray-400 hover:text-white tracking-wide transition-colors">Contact</a>
+                <a href="assets/Resume_PaarthParekh.pdf" target="_blank" class="border border-bronze-600 text-bronze-300 px-5 py-2 rounded-md text-xs font-bold tracking-wide hover:bg-bronze-600 hover:text-white transition-all">
+                    Resume
+                </a>
+            </div>
+            <button id="mobileMenuToggle" class="md:hidden text-gray-300 hover:text-white transition-colors" aria-label="Open menu">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+        <div id="mobileMenu" class="md:hidden hidden border-t border-gray-800 bg-surface px-6 pb-6 pt-4">
+            <div class="flex flex-col gap-4">
+                <a href="#experience" class="text-sm font-label font-medium text-gray-300 hover:text-white tracking-wide transition-colors">Experience</a>
+                <a href="#selected-work" class="text-sm font-label font-medium text-gray-300 hover:text-white tracking-wide transition-colors">Selected Work</a>
+                <a href="#about" class="text-sm font-label font-medium text-gray-300 hover:text-white tracking-wide transition-colors">About</a>
+                <a href="#contact" class="text-sm font-label font-medium text-gray-300 hover:text-white tracking-wide transition-colors">Contact</a>
+                <a href="assets/Resume_PaarthParekh.pdf" target="_blank" class="inline-flex w-fit border border-bronze-600 text-bronze-300 px-4 py-2 rounded-md text-xs font-bold tracking-wide hover:bg-bronze-600 hover:text-white transition-all">
+                    Resume
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hidden xl:flex fixed left-6 bottom-0 flex-col items-center space-y-6 z-40">
+        <a aria-label="Link to my Github" href="https://github.com/PaarthParekh" rel="noreferrer noopener" target="_blank" class="text-gray-500 hover:text-bronze-500 transition-colors duration-300">
+            <svg fill="currentColor" viewBox="0 0 61 65" xmlns="http://www.w3.org/2000/svg" class="size-6 aspect-square"><path d="M60.258 23.833A17.781 17.781 0 0 0 56.3 12.715a17.932 17.932 0 0 0-.772-10.813 2.385 2.385 0 0 0-1.503-1.38c-.966-.33-4.621-.951-12.07 3.876a35.975 35.975 0 0 0-9.82-1.185c-3.317-.06-6.627.34-9.835 1.186C14.66-.54 10.686.26 9.886.495a2.414 2.414 0 0 0-1.504 1.407 17.93 17.93 0 0 0-.8 10.786 16.849 16.849 0 0 0-3.944 11.2c0 15.255 8.73 19.862 16.73 21.49a12.89 12.89 0 0 0-.84 3.13 1.336 1.336 0 0 0 0 .346v4.22c-7.283.607-8.841-3.655-8.993-4.138a3.208 3.208 0 0 0-.126-.331 12.207 12.207 0 0 0-6.896-6.138 2.414 2.414 0 1 0-1.53 4.58 7.295 7.295 0 0 1 3.917 3.35c.966 3.131 4.911 8.083 13.6 7.531v3.973a2.414 2.414 0 0 0 4.828 0V49.032a6.899 6.899 0 0 1 1.75-3.766A2.4 2.4 0 0 0 24.7 41.13c-8.414-.98-16.192-3.752-16.192-17.338h-.001a11.867 11.867 0 0 1 3.53-8.855 2.564 2.564 0 0 0 .553-2.565 11.955 11.955 0 0 1-.152-7.31 20.979 20.979 0 0 1 8.151 3.82 2.47 2.47 0 0 0 2.124.29 29.81 29.81 0 0 1 9.463-1.283c3.198-.084 6.388.35 9.448 1.283a2.457 2.457 0 0 0 2.124-.29 21.672 21.672 0 0 1 7.807-3.794 12.21 12.21 0 0 1-.18 7.38 2.388 2.388 0 0 0 .47 2.345 13.437 13.437 0 0 1 3.627 8.979c0 13.558-8.18 16.372-16.193 17.338a2.401 2.401 0 0 0-1.158 4.318c.855.648 1.848 2.468 1.848 5.516v10.924a2.413 2.413 0 1 0 4.827 0V50.964a14.707 14.707 0 0 0-1.034-5.614c6.482-1.378 16.496-5.64 16.496-21.517Z"></path></svg>
+        </a>
+        <a aria-label="Link to my LinkedIn" href="https://www.linkedin.com/in/parekhpaarth/" rel="noreferrer noopener" target="_blank" class="text-gray-500 hover:text-bronze-500 transition-colors duration-300">
+            <svg fill="currentColor" viewBox="0 0 448 448" xmlns="http://www.w3.org/2000/svg" class="size-6 aspect-square"><path d="M100.28 448H7.4V148.9h92.88V448ZM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3ZM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448h-.1Z"></path></svg>
+        </a>
+        <div class="h-24 border-l border-gray-800"></div>
+    </div>
+
+    <main class="relative z-10 pt-24 pb-16"> 
+        
+        <section class="max-w-7xl mx-auto px-6 pt-10 pb-16"> 
+            <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+                <div class="w-full md:w-3/5"> 
+                    
+                    <div class="flex flex-wrap gap-2 mb-5">
+                        <span class="bg-bronze-900/30 text-bronze-300 border border-bronze-800/50 px-3 py-1 rounded text-[10px] font-bold uppercase tracking-widest">Solution Architecture</span>
+                        <span class="bg-bronze-900/30 text-bronze-300 border border-bronze-800/50 px-3 py-1 rounded text-[10px] font-bold uppercase tracking-widest">Enterprise Implementations</span>
+                    </div>
+                    
+                    <h1 class="font-headline text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.08] text-white mb-6">
+                        Client-Facing Solutions Architect and <span class="text-bronze-500">Implementation Consultant</span>
+                    </h1>
+                    
+                    <p class="text-base lg:text-lg text-gray-400 max-w-xl leading-relaxed font-medium mb-8">
+                        I help organizations translate complex business and technical requirements into practical implementation plans, scalable workflows, and platform solutions. My experience spans enterprise software, fintech, and data platform environments across discovery, solution design, onboarding, delivery, and post-go-live support
+                    </p>
+                    
+                    <div class="flex flex-wrap items-center gap-4">
+                        <a href="assets/Resume_PaarthParekh.pdf" target="_blank" class="bg-bronze-600 text-white px-8 py-4 rounded-md font-bold tracking-[0.18em] uppercase text-xs hover:bg-bronze-500 transition-colors shadow-lg shadow-bronze-900/20">
+                            View Resume
+                        </a>
+                        <a href="#experience" class="border border-gray-700 text-gray-400 px-8 py-4 rounded-md font-bold tracking-[0.18em] uppercase text-xs hover:border-gray-500 hover:text-white transition-colors">
+                            See Experience
+                        </a>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-2/5 flex justify-center md:justify-end">
+                    <div class="aspect-square md:aspect-[4/5] max-w-[360px] w-full rounded-xl overflow-hidden relative group border border-gray-800">
+                        <img src="assets/PaarthParekh.png" alt="Paarth Parekh" class="w-full h-full object-cover rounded-xl relative z-10 hover:grayscale transition-all duration-700" onerror="this.src='https://via.placeholder.com/600x800/1c1c1c/8c6538?text=Profile+Image'" />
+                    </div>
+                </div>
+            </div>
+        </section>
+		
+        <section class="border-y border-gray-800 bg-surface-elevated py-8">
+            <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-gray-800">
+                <div class="px-4 text-center">
+                    <div class="text-3xl font-headline font-bold text-white mb-1">5+</div>
+                    <div class="text-[9px] tracking-[0.2em] text-bronze-500 font-bold uppercase">YEARS CLIENT-FACING DELIVERY</div>
+                </div>
+                <div class="px-4 text-center">
+                    <div class="text-3xl font-headline font-bold text-white mb-1">5</div>
+                    <div class="text-[9px] tracking-[0.2em] text-bronze-500 font-bold uppercase">IMPLEMENTATIONS DELIVERED</div>
+                </div>
+                <div class="px-4 text-center">
+                    <div class="text-3xl font-headline font-bold text-white mb-1">3</div>
+                    <div class="text-[9px] tracking-[0.2em] text-bronze-500 font-bold uppercase">PROGRAMS ONGOING</div>
+                </div>
+                <div class="px-4 text-center">
+                    <div class="text-3xl font-headline font-bold text-white mb-1">2</div>
+                    <div class="text-[9px] tracking-[0.2em] text-bronze-500 font-bold uppercase">SAAS MIGRATIONS COMPLETED</div>
+                </div>
+            </div>
+        </section>
+		
+        <section id="about" class="py-20 md:py-24 max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-16 items-start">
+                <div class="w-full md:w-3/5">
+                    <h2 class="font-headline text-3xl font-bold mb-8 flex items-center gap-4 text-white">
+                        About Me
+                        <span class="h-[1px] flex-1 bg-gray-800"></span>
+                    </h2>
+                    
+                    <div class="space-y-5 text-gray-400 text-lg leading-relaxed">
+                        <p>
+                            I work at the intersection of client delivery, solution design, and technical execution. Across Charles River Development and Javelin, I have supported and delivered 5 implementations spanning enterprise workflows, data onboarding, SaaS modernization, and stakeholder coordination from discovery through go-live.
+                        </p>
+                        <p>
+                            At Charles River Development, I work with institutional and enterprise clients to modernize investment workflows, guide technical discovery, define integration strategies, and support implementation delivery across SaaS, data, and legacy environments.
+                        </p>
+                        <p>
+                            Earlier in my career, I worked in a startup environment across client delivery, platform execution, and product coordination. That experience continues to shape how I approach ambiguity, workflow design, stakeholder alignment, and implementation in fast-moving teams.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-2/5 space-y-8 mt-4 md:mt-16">
+                    <div>
+                        <span class="material-symbols-outlined text-bronze-500 mb-2 text-2xl">architecture</span>
+                        <h3 class="font-headline font-bold text-white mb-2">Solution Design</h3>
+                        <p class="text-sm text-gray-500 leading-relaxed">Translate business requirements into workflow designs, implementation plans, and solutions approaches that are practical to deliver.</p>
+                    </div>
+                    
+                    <div>
+                        <span class="material-symbols-outlined text-bronze-500 mb-2 text-2xl">group</span>
+                        <h3 class="font-headline font-bold text-white mb-2">Client-Facing Delivery</h3>
+                        <p class="text-sm text-gray-500 leading-relaxed">Lead technical discovery, stakeholder alignment, and implementation execution across onboarding, migration, and post-go-live support.</p>
+                    </div>
+
+                    <div>
+                        <span class="material-symbols-outlined text-bronze-500 mb-2 text-2xl">cable</span>
+                        <h3 class="font-headline font-bold text-white mb-2">Data and Integration Strategy</h3>
+                        <p class="text-sm text-gray-500 leading-relaxed">Support data onboarding, workflow design, and system integrations across enterprise platforms using APIs, ETL, SQL, and cloud platforms.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+           <section class="py-20 md:py-24 bg-surface-elevated">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="mb-12">
+                    <h2 class="font-headline text-3xl font-bold mb-2">What I Bring</h2>
+                    <p class="text-gray-400">Core strengths across solution design, client delivery, data-driven platform execution and cross-functional platform development.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                    <div class="md:col-span-6 bg-surface-card p-8 rounded-xl border border-gray-800 group hover:border-bronze-800 transition-colors">
+                        <span class="material-symbols-outlined text-3xl text-bronze-500 mb-6">handshake</span>
+                        <h3 class="font-headline text-xl font-bold text-white mb-3">What I Do</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs font-bold tracking-[0.14em] text-gray-300 bg-surface px-3 py-1 rounded border border-gray-800">SOLUTION DESIGN</span>
+                            <span class="text-xs font-bold tracking-[0.14em] text-gray-300 bg-surface px-3 py-1 rounded border border-gray-800">TECHNICAL DISCOVERY</span>
+                            <span class="text-xs font-bold tracking-[0.14em] text-gray-300 bg-surface px-3 py-1 rounded border border-gray-800">ENTERPRISE IMPLEMENTATIONS</span>
+                            <span class="text-xs font-bold tracking-[0.14em] text-gray-300 bg-surface px-3 py-1 rounded border border-gray-800">SAAS MIGRATIONS</span>
+                            <span class="text-xs font-bold tracking-[0.14em] text-gray-300 bg-surface px-3 py-1 rounded border border-gray-800">WORKFLOW DESIGN</span>
+                            <span class="text-xs font-bold tracking-[0.14em] text-gray-300 bg-surface px-3 py-1 rounded border border-gray-800">DATA INTEGRATIONS</span>
+                            <span class="text-xs font-bold tracking-[0.14em] text-gray-300 bg-surface px-3 py-1 rounded border border-gray-800">STAKEHOLDER MANAGEMENT</span>
+                            <span class="text-xs font-bold tracking-[0.14em] text-gray-300 bg-surface px-3 py-1 rounded border border-gray-800">POST-GO-LIVE SUPPORT</span>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-6 bg-surface-card p-8 rounded-xl border border-gray-800 group hover:border-bronze-800 transition-colors">
+                        <span class="material-symbols-outlined text-3xl text-bronze-500 mb-6">terminal</span>
+                        <h3 class="font-headline text-xl font-bold text-white mb-3">Technical Foundations</h3>
+                        <p class="text-sm text-gray-400 mb-4">Technical depth supporting solutioning, integrations, workflow implementation, and data-driven delivery.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs font-bold tracking-[0.14em] text-gray-300 bg-surface px-3 py-1 rounded border border-gray-800">PYTHON</span>
+                            <span class="text-xs font-bold tracking-[0.14em] text-gray-300 bg-surface px-3 py-1 rounded border border-gray-800">SQL</span>
+                            <span class="text-xs font-bold tracking-[0.14em] text-gray-300 bg-surface px-3 py-1 rounded border border-gray-800">JAVA</span>
+                            <span class="text-xs font-bold tracking-[0.14em] text-gray-300 bg-surface px-3 py-1 rounded border border-gray-800">C#</span>
+							<span class="text-xs font-bold tracking-[0.14em] text-gray-300 bg-surface px-3 py-1 rounded border border-gray-800">AWS</span>
+                            <span class="text-xs font-bold tracking-[0.14em] text-gray-300 bg-surface px-3 py-1 rounded border border-gray-800">AZURE</span>
+                            <span class="text-xs font-bold tracking-[0.14em] text-gray-300 bg-surface px-3 py-1 rounded border border-gray-800">REST APIS</span>
+                            <span class="text-xs font-bold tracking-[0.14em] text-gray-300 bg-surface px-3 py-1 rounded border border-gray-800">XML MESSAGING</span>
+                            <span class="text-xs font-bold tracking-[0.14em] text-gray-300 bg-surface px-3 py-1 rounded border border-gray-800">ETL PIPELINES</span>
+                            <span class="text-xs font-bold tracking-[0.14em] text-gray-300 bg-surface px-3 py-1 rounded border border-gray-800">GIT</span>
+                            <span class="text-xs font-bold tracking-[0.14em] text-gray-300 bg-surface px-3 py-1 rounded border border-gray-800">CI/CD</span>
+                            
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-4 bg-surface-card p-8 rounded-xl border border-gray-800 group hover:border-bronze-800 transition-colors">
+                        <span class="material-symbols-outlined text-3xl text-bronze-500 mb-6">account_balance</span>
+                        <h3 class="font-headline text-xl font-bold text-white mb-3">Fintech Platforms</h3>
+                        <p class="text-sm text-gray-300 leading-relaxed mb-4">Enterprise platform experience supporting investment workflows, reporting, post-trade operations, onboarding, SaaS modernization, and implementation delivery across complex client environments.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                        </div>
+                        <div class="text-[10px] tracking-[0.18em] text-bronze-400 font-bold">CHARLES RIVER IMS • STATE STREET ALPHA</div>
+                    </div>
+
+                    <div class="md:col-span-4 bg-surface-card p-8 rounded-xl border border-gray-800 group hover:border-bronze-800 transition-colors">
+                        <span class="material-symbols-outlined text-3xl text-bronze-500 mb-6">schema</span>
+                        <h3 class="font-headline text-xl font-bold text-white mb-3">Data and Integration Strategy</h3>
+                        <p class="text-sm text-gray-300 leading-relaxed">Experience supporting resilient data flows across enterprise systems using REST APIs, XML messaging, ETL pipelines, data validation, onboarding logic, and workflow support.</p>
+                    </div>
+
+                    <div class="md:col-span-4 bg-surface-card p-8 rounded-xl border border-gray-800 group hover:border-bronze-800 transition-colors">
+                        <span class="material-symbols-outlined text-3xl text-bronze-500 mb-6">memory</span>
+                        <h3 class="font-headline text-xl font-bold text-white mb-3">Startup Platform Delivery</h3>
+                        <p class="text-sm text-gray-300 leading-relaxed">Experience working in fast-moving platform environments where client delivery, workflow structure, stakeholder alignment, and scalable execution are critical to successful adoption.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+		<section id="experience" class="py-20 md:py-24 max-w-7xl mx-auto px-6 border-t border-gray-800">
+            <h2 class="font-headline text-3xl font-bold mb-10 flex items-center gap-4 text-white">
+                Experience
+                <span class="h-[1px] w-24 bg-gray-800"></span>
+            </h2>
+
+            <div class="flex flex-col md:flex-row gap-10">
+                <div class="w-full md:w-1/4">
+                    <div class="text-[10px] tracking-[0.2em] text-gray-500 font-bold uppercase mb-4 px-2">Select Role</div>
+                    <div class="border-l border-gray-800 flex flex-row md:flex-col overflow-x-auto md:overflow-visible no-scrollbar">
+                        <button class="tab-btn w-full text-left px-6 py-4 text-sm font-label tracking-wide font-bold border-l-2 transition-all border-bronze-500 text-white bg-gray-800 whitespace-nowrap" data-target="exp-crd">
+                            Charles River
+                        </button>
+                        <button class="tab-btn w-full text-left px-6 py-4 text-sm font-label tracking-wide font-bold border-l-2 transition-all border-transparent text-gray-600 hover:text-gray-300 hover:bg-gray-900/30 whitespace-nowrap" data-target="exp-javelin">
+                            Javelin
+                        </button>
+                        <button class="tab-btn w-full text-left px-6 py-4 text-sm font-label tracking-wide font-bold border-l-2 transition-all border-transparent text-gray-600 hover:text-gray-300 hover:bg-gray-900/30 whitespace-nowrap" data-target="exp-gsk">
+                            GSK
+                        </button>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-3/4 min-h-[480px]">
+                    <div id="exp-crd" class="tab-content active bg-surface-card p-8 md:p-10 rounded-xl border border-gray-800 h-full">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-8 gap-4">
+                            <div>
+                                <h3 class="font-headline text-2xl font-bold text-white">Technical Implementation Consultant</h3>
+                                <div class="text-bronze-500 font-medium mt-1">Charles River Development (State Street)</div>
+                            </div>
+                            <div class="text-right">
+                                <span class="bg-gray-800 text-gray-300 px-3 py-1 rounded text-[10px] font-bold tracking-[0.18em]">Aug 2025 - Present</span>
+                                <div class="text-xs text-gray-500 mt-2 font-label tracking-[0.18em]">Boston, MA</div>
+                            </div>
+                        </div>
+                        <p class="text-sm font-bold text-gray-400 tracking-[0.18em] mb-6 border-b border-gray-800 pb-2">Enterprise Implementation, Workflow Design & Platform Integration</p>
+                        <ul class="space-y-4 text-gray-300">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-bronze-600 text-lg mt-0.5">check_circle</span>
+                                <span>Led discovery sessions for 2 client implementations and 3 in-flight programs for global asset managers within the Charles River IMS and State Street Alpha ecosystem.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-bronze-600 text-lg mt-0.5">check_circle</span>
+                                <span>Translate client requirements into scalable configurations and integration designs supporting data import, batch design, trade lifecycle, post-trade processing, settlement, and reporting.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-bronze-600 text-lg mt-0.5">check_circle</span>
+                                <span>Architect and support 1 greenfield implementation and 2 on-premises-to-SaaS migrations, helping clients modernize legacy environments.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-bronze-600 text-lg mt-0.5">check_circle</span>
+                                <span>Serve as a primary technical point of contact across solution design, operational workflows, implementation activities, and post-production support.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-bronze-600 text-lg mt-0.5">check_circle</span>
+                                <span>Supported change-request discussions when evolving requirements affected implementation scope, delivery timelines, or technical design decisions.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="exp-javelin" class="tab-content bg-surface-card p-8 md:p-10 rounded-xl border border-gray-800 h-full">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-8 gap-4">
+                            <div>
+                                <h3 class="font-headline text-2xl font-bold text-white">Computer and Solutions Engineer</h3>
+                                <div class="text-bronze-500 font-medium mt-1">Javelin</div>
+                            </div>
+                            <div class="text-right">
+                                <span class="bg-gray-800 text-gray-300 px-3 py-1 rounded text-[10px] font-bold tracking-[0.18em]">Jun 2021 - Jul 2025</span>
+                                <div class="text-xs text-gray-500 mt-2 font-label tracking-[0.18em]">Woburn, MA</div>
+                            </div>
+                        </div>
+                        <p class="text-sm font-bold text-gray-400 tracking-[0.18em] mb-6 border-b border-gray-800 pb-2">Startup Platform Delivery, Client Implementations & Workflow Design</p>
+                        <ul class="space-y-4 text-gray-300">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-bronze-600 text-lg mt-0.5">check_circle</span>
+                                <span>Led delivery and support for 3 implementation projects with large pharmaceutical clients, translating stakeholder needs into scalable workflows and implementation plans.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-bronze-600 text-lg mt-0.5">check_circle</span>
+                                <span>Served as the primary technical liaison for cross-functional stakeholders, simplifying complex platform concepts and improving adoption through training, demos, and onboarding documentation.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-bronze-600 text-lg mt-0.5">check_circle</span>
+                                <span>Designed structured data workflows, onboarding approaches, and implementation plans that improved delivery consistency and accelerated time-to-value.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-bronze-600 text-lg mt-0.5">check_circle</span>
+                                <span>Partnered with leadership, scientists, and engineers to translate evolving business and client needs into practical execution plans and scalable delivery patterns.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="exp-gsk" class="tab-content bg-surface-card p-8 md:p-10 rounded-xl border border-gray-800 h-full">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-8 gap-4">
+                            <div>
+                                <h3 class="font-headline text-2xl font-bold text-white">Data Analyst Co-OP</h3>
+                                <div class="text-bronze-500 font-medium mt-1">GSK</div>
+                            </div>
+                            <div class="text-right">
+                                <span class="bg-gray-800 text-gray-300 px-3 py-1 rounded text-[10px] font-bold tracking-[0.18em]">Jun 2020 - Dec 2020</span>
+                                <div class="text-xs text-gray-500 mt-2 font-label tracking-[0.18em]">Rockville, MD</div>
+                            </div>
+                        </div>
+                        <p class="text-sm font-bold text-gray-400 tracking-[0.18em] mb-6 border-b border-gray-800 pb-2">Workflow Automation, Analytics & Reporting</p>
+                        <ul class="space-y-4 text-gray-300">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-bronze-600 text-lg mt-0.5">check_circle</span>
+                                <span>Developed automated analysis scripts and ETL workflows in Python to improve throughput, reduce manual effort, and support repeatable data processing.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-bronze-600 text-lg mt-0.5">check_circle</span>
+                                <span>Built analyses, visualizations, and reporting outputs that helped stakeholders interpret complex data and support decision-making.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-bronze-600 text-lg mt-0.5">check_circle</span>
+                                <span>Improved data handling and reporting efficiency through structured scripting, workflow optimization, and version-controlled development practices.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="selected-work" class="py-24 md:py-28 bg-surface-elevated border-t border-gray-800">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="mb-16 text-center">
+                    <span class="text-[10px] font-label tracking-[0.3em] text-bronze-400 font-bold mb-4 block">SELECTED WORK</span>
+                    <h2 class="font-headline text-4xl font-bold text-white">Selected Implementation and Delivery Work</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-surface-card rounded-xl border border-gray-800 hover:border-bronze-600 transition-colors p-6 md:p-8 flex flex-col h-full">
+                        <div class="flex justify-between items-start mb-6">
+                            <span class="bg-bronze-900/30 text-bronze-300 px-2 py-1 rounded text-[9px] font-bold tracking-[0.18em] border border-bronze-800/50">IMPLEMENTATION</span>
+                        </div>
+                        <h3 class="font-headline text-xl font-bold text-white mb-3">Enterprise SaaS Migration and Workflow Design</h3>
+                        <p class="text-sm text-gray-300 leading-relaxed mb-6 flex-grow">Led technical discovery, requirements mapping, and workflow design for enterprise platform implementations and migration initiatives, aligning data onboarding, user enablement, and target-state operating workflows.</p>
+                        <div class="border-t border-gray-800 pt-5 mt-auto">
+                            <div class="text-[10px] tracking-[0.18em] text-gray-400 font-bold mb-2">OUTCOME</div>
+                            <div class="text-sm text-white font-medium">Supported smoother production cutovers and stronger platform readiness through clearer workflow alignment and implementation planning.</div>
+                        </div>
+                    </div>
+
+                    <div class="bg-surface-card rounded-xl border border-gray-800 hover:border-bronze-600 transition-colors p-6 md:p-8 flex flex-col h-full">
+                        <div class="flex justify-between items-start mb-6">
+                            <span class="bg-bronze-900/30 text-bronze-300 px-2 py-1 rounded text-[9px] font-bold tracking-[0.18em] border border-bronze-800/50">PLATFORM DELIVERY</span>
+                        </div>
+                        <h3 class="font-headline text-xl font-bold text-white mb-3">Client-Facing Platform Delivery and Solution Design</h3>
+                        <p class="text-sm text-gray-300 leading-relaxed mb-6 flex-grow">Owned client-facing implementation and delivery for a data-driven platform environment, translating stakeholder needs into onboarding plans, workflow structures, and coordinated execution with leadership and engineering teams.</p>
+                        <div class="border-t border-gray-800 pt-5 mt-auto">
+                            <div class="text-[10px] tracking-[0.18em] text-gray-400 font-bold mb-2">OUTCOME</div>
+                            <div class="text-sm text-white font-medium">Improved implementation consistency and delivery alignment through stronger planning, stakeholder coordination, and execution.</div>
+                        </div>
+                    </div>                 
+				 <div class="bg-surface-card rounded-xl border border-gray-800 hover:border-bronze-600 transition-colors p-6 md:p-8 flex flex-col h-full">
+                        <div class="flex justify-between items-start mb-6">
+                            <span class="bg-bronze-900/30 text-bronze-300 px-2 py-1 rounded text-[9px] font-bold tracking-[0.18em] border border-bronze-800/50">DATA INTEGRATION</span>
+                        </div>
+                        <h3 class="font-headline text-xl font-bold text-white mb-3">Data Integration and Workflow Automation</h3>
+                        <p class="text-sm text-gray-300 leading-relaxed mb-6 flex-grow">Designed scalable ETL and data workflow patterns using Python, SQL, and cloud-based tools to support structured data environments, downstream analytics, reporting, and validation.</p>
+                        <div class="border-t border-gray-800 pt-5 mt-auto">
+                            <div class="text-[10px] tracking-[0.18em] text-gray-400 font-bold mb-2">OUTCOME</div>
+                            <div class="text-sm text-white font-medium">Improved workflow reliability, strengthened data validation, and supported more consistent downstream analytics and reporting.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 flex flex-wrap justify-center gap-4 md:gap-6">
+					<a href="projects.html" class="border border-gray-700 text-gray-300 px-8 py-3 rounded-md text-xs font-bold tracking-[0.18em] hover:border-gray-500 hover:text-white transition-colors text-center">
+					    View All Projects
+					</a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact" class="py-24 max-w-4xl mx-auto px-6 text-center border-t border-gray-800">
+            <h2 class="font-headline text-xl md:text-xl font-bold text-white mb-6 leading-relaxed">
+                Open to Solutions Architect, Technical Implementation, and Product Platform Delivery roles.
+            </h2>
+            <p class="text-gray-400 mb-10 text-base">
+                Looking for roles requiring solutions design, client-facing delivery, workflow design, data integration, stakeholder coordination, and end-to-end implementation support.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 md:gap-6">
+                <a href="mailto:paarthparekh2824@gmail.com" class="bg-bronze-600 text-white px-8 py-4 rounded-md font-bold tracking-[0.18em] text-xs hover:bg-bronze-500 transition-colors shadow-lg">
+                    Email Me
+                </a>
+                <a href="https://www.linkedin.com/in/parekhpaarth/" target="_blank" class="border border-gray-700 text-gray-300 px-8 py-4 rounded-md font-bold tracking-[0.18em] text-xs hover:border-gray-500 hover:text-white transition-colors">
+                    LinkedIn
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-surface-card border-t border-gray-800 py-12">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8 md:gap-6">
+            <div class="text-center md:text-left">
+                <div class="font-headline text-lg font-bold text-white mb-1">Paarth Parekh</div>
+                <div class="text-xs text-gray-500 font-label tracking-[0.18em]">CLIENT-FACING DELIVERY | ENTERPRISE IMPLEMENTATIONS | PLATFORM INTEGRATIONS</div>
+            </div>
+            
+            <div class="flex flex-col items-center gap-5">
+                <div class="flex items-center gap-2 text-gray-500 text-sm">
+                    <a href="https://www.google.com/maps/place/Boston,+MA/@42.3145014,-71.1348348,11z/data=!3m1!4b1!4m6!3m5!1s0x89e3652d0d3d311b:0x787cbf240162e8a0!8m2!3d42.3555076!4d-71.0565364!16zL20vMDFjeF8?authuser=2&entry=ttu&g_ep=EgoyMDI2MDMyNC4wIKXMDSoASAFQAw%3D%3D" class="flex items-center gap-1 hover:text-gray-300 transition-colors">
+                        <span class="material-symbols-outlined text-[18px]">location_on</span>
+                        Boston, MA
+                    </a>
+                </div>
+                
+                <div class="flex xl:hidden items-center gap-6">
+                    <a aria-label="Link to my Github" href="https://github.com/PaarthParekh" rel="noreferrer noopener" target="_blank" class="text-gray-600 hover:text-bronze-500 transition-colors duration-300">
+                        <svg fill="currentColor" viewBox="0 0 61 65" xmlns="http://www.w3.org/2000/svg" class="size-5 aspect-square"><path d="M60.258 23.833A17.781 17.781 0 0 0 56.3 12.715a17.932 17.932 0 0 0-.772-10.813 2.385 2.385 0 0 0-1.503-1.38c-.966-.33-4.621-.951-12.07 3.876a35.975 35.975 0 0 0-9.82-1.185c-3.317-.06-6.627.34-9.835 1.186C14.66-.54 10.686.26 9.886.495a2.414 2.414 0 0 0-1.504 1.407 17.93 17.93 0 0 0-.8 10.786 16.849 16.849 0 0 0-3.944 11.2c0 15.255 8.73 19.862 16.73 21.49a12.89 12.89 0 0 0-.84 3.13 1.336 1.336 0 0 0 0 .346v4.22c-7.283.607-8.841-3.655-8.993-4.138a3.208 3.208 0 0 0-.126-.331 12.207 12.207 0 0 0-6.896-6.138 2.414 2.414 0 1 0-1.53 4.58 7.295 7.295 0 0 1 3.917 3.35c.966 3.131 4.911 8.083 13.6 7.531v3.973a2.414 2.414 0 0 0 4.828 0V49.032a6.899 6.899 0 0 1 1.75-3.766A2.4 2.4 0 0 0 24.7 41.13c-8.414-.98-16.192-3.752-16.192-17.338h-.001a11.867 11.867 0 0 1 3.53-8.855 2.564 2.564 0 0 0 .553-2.565 11.955 11.955 0 0 1-.152-7.31 20.979 20.979 0 0 1 8.151 3.82 2.47 2.47 0 0 0 2.124.29 29.81 29.81 0 0 1 9.463-1.283c3.198-.084 6.388.35 9.448 1.283a2.457 2.457 0 0 0 2.124-.29 21.672 21.672 0 0 1 7.807-3.794 12.21 12.21 0 0 1-.18 7.38 2.388 2.388 0 0 0 .47 2.345 13.437 13.437 0 0 1 3.627 8.979c0 13.558-8.18 16.372-16.193 17.338a2.401 2.401 0 0 0-1.158 4.318c.855.648 1.848 2.468 1.848 5.516v10.924a2.413 2.413 0 1 0 4.827 0V50.964a14.707 14.707 0 0 0-1.034-5.614c6.482-1.378 16.496-5.64 16.496-21.517Z"></path></svg>
+                    </a>
+                    <a aria-label="Link to my LinkedIn" href="https://www.linkedin.com/in/parekhpaarth/" rel="noreferrer noopener" target="_blank" class="text-gray-600 hover:text-bronze-500 transition-colors duration-300">
+                        <svg fill="currentColor" viewBox="0 0 448 448" xmlns="http://www.w3.org/2000/svg" class="size-5 aspect-square"><path d="M100.28 448H7.4V148.9h92.88V448ZM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3ZM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448h-.1Z"></path></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-xs text-gray-600 font-label tracking-[0.18em] text-center md:text-right">
+                © 2026. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tab Switching Logic and Mobile Menu Updated for High Contrast Classes
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Reset all buttons to inactive state
+                    tabBtns.forEach(b => {
+                        b.classList.remove('border-bronze-500', 'text-white', 'bg-gray-800');
+                        b.classList.add('border-transparent', 'text-gray-600');
+                    });
+                    
+                    // Set active button to active state
+                    btn.classList.add('border-bronze-500', 'text-white', 'bg-gray-800');
+                    btn.classList.remove('border-transparent', 'text-gray-600');
+
+                    // Hide all content
+                    tabContents.forEach(content => content.classList.remove('active'));
+
+                    // Show target content
+                    const targetId = btn.getAttribute('data-target');
+                    document.getElementById(targetId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
 </html>
